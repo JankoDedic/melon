@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom';
 // };
 
 class ExampleComponent extends React.Component {
-  // myMethod = () => {
-  // }
+  myMethod = () => {
+  }
   render() {
     return (
       <div>
