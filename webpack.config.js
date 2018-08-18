@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './src/app.js',
+  entry: [ 'babel-polyfill', './src/app.js' ],
   output: {
     path: path.join(__dirname, 'public', 'dist'),
     filename: 'bundle.js'
@@ -12,7 +12,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: '/node_modules/',
-        loader: 'babel-loader',
+        loader: 'babel-loader'
       }
     ]
   },
