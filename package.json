@@ -3,5 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Janko Dedic",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev-server": "webpack-dev-server"
+  },
+  "dependencies": {
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.1.5"
+  }
 }
