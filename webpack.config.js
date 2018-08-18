@@ -11,7 +11,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: '/node_modules/',
+        exclude: /node_modules/,
         loader: 'babel-loader'
       }
     ]
@@ -19,5 +19,6 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     publicPath: '/dist/'
-  }
+  },
+  devtool: 'inline-source-map'
 };

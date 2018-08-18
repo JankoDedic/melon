@@ -1,21 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SeekBar from './components/SeekBar';
 
-const AnotherComponent = ({...props}) => {
-};
+const App = () => (
+  <div>
+    <SeekBar
+      duration={270}
+      isPlaybackActive={false}
+      onSeek={(value) => { console.log('You seeked to', value); }}
+      onPlaybackPause={() => { console.log('Playback paused'); }}
+      onPlaybackResume={() => { console.log('Playback resumed'); }}
+    />
+  </div>
+);
 
-const { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
-
-class ExampleComponent extends React.Component {
-  myMethod = () => {
-  }
-  render() {
-    return (
-      <div>
-        Some text here
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<ExampleComponent />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
