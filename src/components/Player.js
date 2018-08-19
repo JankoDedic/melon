@@ -12,6 +12,7 @@ class Player extends React.Component {
   state = {
     isPlaybackActive: false,
     duration: 0,
+    progress: 0,
   };
 
   togglePlayback = () => {
@@ -23,6 +24,10 @@ class Player extends React.Component {
   onDuration = (duration) => {
     this.setState({ duration });
   }
+  
+  onProgress = ({ playedSeconds }) => {
+    this.setState({ progress: playedSeconds });
+  }
 
   render() {
     return (
@@ -32,10 +37,12 @@ class Player extends React.Component {
           url="https://youtu.be/0yBnIUX0QAE"
           playing={this.state.isPlaybackActive}
           onDuration={this.onDuration}
+          onProgress={this.onProgress}
         />
         <button onClick={this.togglePlayback}>play/pause</button>
         <Seekbar
           duration={this.state.duration}
+          progress={this.state.progress}
           isPlaybackActive={this.state.isPlaybackActive}
           onSeek={(value) => { console.log('You seeked to', value); }}
           onPlaybackPause={() => { console.log('Playback paused'); }}
