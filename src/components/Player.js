@@ -29,10 +29,19 @@ class Player extends React.Component {
     this.setState({ progress: playedSeconds });
   }
 
+  onSeek = (seconds) => {
+    this.reactPlayer.seekTo(seconds);
+  }
+
+  ref = reactPlayer => {
+    this.reactPlayer = reactPlayer;
+  }
+
   render() {
     return (
       <div>
         <ReactPlayer
+          ref={this.ref}
           style={reactPlayerStyle}
           url="https://youtu.be/0yBnIUX0QAE"
           playing={this.state.isPlaybackActive}
@@ -43,7 +52,7 @@ class Player extends React.Component {
         <Seekbar
           duration={this.state.duration}
           progress={this.state.progress}
-          onSeek={(value) => { console.log('You seeked to', value); }}
+          onSeek={this.onSeek}
           onHandleDragStart={() => { console.log('Playback paused'); }}
           onHandleDragEnd={() => { console.log('Playback resumed'); }}
         />
