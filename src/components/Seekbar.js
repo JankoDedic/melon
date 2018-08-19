@@ -14,28 +14,7 @@ class Seekbar extends React.Component {
     value: 0,
     isHandleDragged: false,
     canSeekOnDragEnd: false,
-    interval: undefined,
   };
-
-  componentDidMount() {
-    this.state.interval = setInterval(this.tick, 1000/20);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.state.interval);
-  }
-
-  tick = () => {
-    if (this.isSlideMovingAutomatically()) {
-      this.setState((prevState) => {
-        if (prevState.value < this.props.duration) {
-          return { value: prevState.value + 1/20 };
-        } else {
-          return prevState.value;
-        }
-      });
-    }
-  }
 
   isSlideMovingAutomatically() {
     return !this.state.isHandleDragged && this.props.isPlaybackActive;
