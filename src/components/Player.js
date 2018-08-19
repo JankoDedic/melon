@@ -11,6 +11,7 @@ const reactPlayerStyle = {
 class Player extends React.Component {
   state = {
     isPlaybackActive: false,
+    duration: 0,
   };
 
   togglePlayback = () => {
@@ -19,6 +20,10 @@ class Player extends React.Component {
     }));
   };
 
+  onDuration = (duration) => {
+    this.setState({ duration });
+  }
+
   render() {
     return (
       <div>
@@ -26,10 +31,11 @@ class Player extends React.Component {
           style={reactPlayerStyle}
           url="https://youtu.be/0yBnIUX0QAE"
           playing={this.state.isPlaybackActive}
+          onDuration={this.onDuration}
         />
         <button onClick={this.togglePlayback}>play/pause</button>
         <Seekbar
-          duration={60}
+          duration={this.state.duration}
           isPlaybackActive={this.state.isPlaybackActive}
           onSeek={(value) => { console.log('You seeked to', value); }}
           onPlaybackPause={() => { console.log('Playback paused'); }}
