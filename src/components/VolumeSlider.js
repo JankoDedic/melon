@@ -13,7 +13,7 @@ const styles = {
 
 class VerticalSlider extends React.Component {
   state = {
-    value: 50,
+    value: 0.5,
   };
 
   handleChange = (e, value) => {
@@ -26,7 +26,7 @@ class VerticalSlider extends React.Component {
 
     return (
       <div className={classes.root}>
-        <Slider value={value} onChange={this.handleChange} vertical reverse />
+        <Slider max={1} value={value} onChange={this.handleChange} vertical reverse />
       </div>
     );
   }
