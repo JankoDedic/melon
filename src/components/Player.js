@@ -49,13 +49,13 @@ class Player extends React.Component {
         <ReactPlayer
           ref={this.ref}
           style={reactPlayerStyle}
-          url="https://youtu.be/0yBnIUX0QAE"
+          url="https://youtu.be/0q3ve6ZnxXE"
           playing={this.state.isPlaybackActive}
           volume={this.state.volume}
           onDuration={this.onDuration}
           onProgress={this.onProgress}
         />
-        <button onClick={this.togglePlayback}>play/pause</button>
+        <button onClick={this.togglePlayback}>PP</button>
         <Seekbar
           duration={this.state.duration}
           progress={this.state.progress}
@@ -63,10 +63,13 @@ class Player extends React.Component {
           onHandleDragStart={() => { console.log('Playback paused'); }}
           onHandleDragEnd={() => { console.log('Playback resumed'); }}
         />
+        <button>VOL</button>
         <VolumeSlider
           volume={this.state.volume}
           onVolumeChange={this.onVolumeChange}
         />
+        <p>Ecstasy (Morten Granau Remix)</p>
+        <p>ATB</p>
       </div>
     );
   }
