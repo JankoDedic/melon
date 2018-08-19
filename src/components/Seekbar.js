@@ -16,10 +16,6 @@ class Seekbar extends React.Component {
     canSeekOnDragEnd: false,
   };
 
-  isSlideMovingAutomatically() {
-    return !this.state.isHandleDragged && this.props.isPlaybackActive;
-  }
-
   // NOTE: Slider component sometimes calls onDragStart twice in cases when
   // the click is near the handle. This should not matter in practice, but
   // you should be aware that you should not rely on onPlaybackPause to
