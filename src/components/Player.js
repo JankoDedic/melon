@@ -68,8 +68,10 @@ class Player extends React.Component {
           volume={this.state.volume}
           onVolumeChange={this.onVolumeChange}
         />
-        <p>Ecstasy (Morten Granau Remix)</p>
-        <p>ATB</p>
+        <div className="player__song-info">
+          <p>Ecstasy (Morten Granau Remix)</p>
+          <p>ATB</p>
+        </div>
       </div>
     );
   }
