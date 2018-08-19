@@ -57,6 +57,7 @@ class Player extends React.Component {
         />
         <button onClick={this.togglePlayback}>PP</button>
         <Seekbar
+          className="player__seekbar"
           duration={this.state.duration}
           progress={this.state.progress}
           onSeek={this.onSeek}
