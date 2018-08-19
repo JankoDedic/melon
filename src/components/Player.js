@@ -1,5 +1,5 @@
 import React from 'react';
-import Seekbar from './Seekbar1';
+import Seekbar from './Seekbar';
 import VolumeSlider from './VolumeSlider';
 
 class Player extends React.Component {
