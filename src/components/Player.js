@@ -31,6 +31,7 @@ class Player extends React.Component {
 
   onSeek = (seconds) => {
     this.reactPlayer.seekTo(seconds);
+    this.setState({ progress: seconds });
   }
 
   ref = reactPlayer => {
