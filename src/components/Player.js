@@ -4,6 +4,10 @@ import ReactPlayer from 'react-player';
 import Seekbar from './Seekbar';
 import VolumeSlider from './VolumeSlider';
 
+const reactPlayerStyle = {
+  display: 'none'
+};
+
 class Player extends React.Component {
   state = {
     isPlaybackActive: false,
@@ -18,7 +22,11 @@ class Player extends React.Component {
   render() {
     return (
       <div>
-        <ReactPlayer url="https://youtu.be/0yBnIUX0QAE" playing />
+        <ReactPlayer
+          style={reactPlayerStyle}
+          url="https://youtu.be/0yBnIUX0QAE"
+          playing
+        />
         <button onClick={this.togglePlayback}>play/pause</button>
         <Seekbar
           duration={60}
