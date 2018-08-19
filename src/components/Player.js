@@ -25,7 +25,7 @@ class Player extends React.Component {
         <ReactPlayer
           style={reactPlayerStyle}
           url="https://youtu.be/0yBnIUX0QAE"
-          playing
+          playing={this.state.isPlaybackActive}
         />
         <button onClick={this.togglePlayback}>play/pause</button>
         <Seekbar
