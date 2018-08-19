@@ -11,7 +11,7 @@ const styles = {
   },
 };
 
-class VerticalSlider extends React.Component {
+class VolumeSlider extends React.Component {
   state = {
     value: 0.5,
   };
@@ -32,8 +32,8 @@ class VerticalSlider extends React.Component {
   }
 }
 
-VerticalSlider.propTypes = {
+VolumeSlider.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(VerticalSlider);
+export default withStyles(styles)(VolumeSlider);
