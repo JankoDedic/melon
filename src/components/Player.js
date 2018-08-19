@@ -45,7 +45,7 @@ class Player extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="player">
         <ReactPlayer
           ref={this.ref}
           style={reactPlayerStyle}
