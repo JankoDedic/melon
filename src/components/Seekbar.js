@@ -25,7 +25,10 @@ class Seekbar extends React.Component {
   // you should be aware that you should not rely on onPlaybackPause to
   // perform any toggling action.
   onDragStart = () => {
-    this.setState({ isHandleDragged: true });
+    this.setState((prevState, props) => ({
+      isHandleDragged: true,
+      value: props.progress
+    }));
 
     if (this.props.isPlaybackActive) {
       this.props.onPlaybackPause();
@@ -67,14 +70,14 @@ class Seekbar extends React.Component {
   }
 
   render() {
-    const { classes } = this.props;
-    const { value } = this.state;
+    const { classes, progress } = this.props;
+    const { value, isHandleDragged } = this.state;
 
     return (
       <div className={classes.root}>
         <Slider
           max={this.props.duration}
-          value={value}
+          value={isHandleDragged ? value : progress}
           aria-labelledby="label"
           onChange={this.onHandleChange}
           onDragStart={this.onDragStart}
@@ -87,6 +90,7 @@ class Seekbar extends React.Component {
 
 Seekbar.propTypes = {
   duration: PropTypes.number.isRequired,
+  progress: PropTypes.number.isRequired,
   isPlaybackActive: PropTypes.bool.isRequired,
 
   onSeek: PropTypes.func,
