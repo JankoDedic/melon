@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import 'normalize.css/normalize.css';
 import './styles/components/Player.css';
 
 import Player from './components/Player';
