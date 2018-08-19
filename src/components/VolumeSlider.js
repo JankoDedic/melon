@@ -12,21 +12,22 @@ const styles = {
 };
 
 class VolumeSlider extends React.Component {
-  state = {
-    value: 0.5,
-  };
-
   handleChange = (e, value) => {
-    this.setState({ value });
+    this.props.onVolumeChange(value);
   };
 
   render() {
     const { classes } = this.props;
-    const { value } = this.state;
 
     return (
       <div className={classes.root}>
-        <Slider max={1} value={value} onChange={this.handleChange} vertical reverse />
+        <Slider
+          max={1}
+          value={this.props.volume}
+          onChange={this.handleChange}
+          vertical
+          reverse
+        />
       </div>
     );
   }
@@ -34,6 +35,8 @@ class VolumeSlider extends React.Component {
 
 VolumeSlider.propTypes = {
   classes: PropTypes.object.isRequired,
+  volume: PropTypes.number.isRequired,
+  onVolumeChange: PropTypes.func,
 };
 
 export default withStyles(styles)(VolumeSlider);

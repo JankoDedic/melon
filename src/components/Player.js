@@ -13,6 +13,7 @@ class Player extends React.Component {
     isPlaybackActive: false,
     duration: 0,
     progress: 0,
+    volume: 0.5,
   };
 
   togglePlayback = () => {
@@ -34,6 +35,10 @@ class Player extends React.Component {
     this.setState({ progress: seconds });
   }
 
+  onVolumeChange = (volume) => {
+    this.setState({ volume });
+  }
+
   ref = reactPlayer => {
     this.reactPlayer = reactPlayer;
   }
@@ -46,6 +51,7 @@ class Player extends React.Component {
           style={reactPlayerStyle}
           url="https://youtu.be/0yBnIUX0QAE"
           playing={this.state.isPlaybackActive}
+          volume={this.state.volume}
           onDuration={this.onDuration}
           onProgress={this.onProgress}
         />
@@ -57,7 +63,10 @@ class Player extends React.Component {
           onHandleDragStart={() => { console.log('Playback paused'); }}
           onHandleDragEnd={() => { console.log('Playback resumed'); }}
         />
-        <VolumeSlider />
+        <VolumeSlider
+          volume={this.state.volume}
+          onVolumeChange={this.onVolumeChange}
+        />
       </div>
     );
   }
