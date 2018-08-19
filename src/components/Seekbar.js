@@ -9,7 +9,7 @@ const styles = {
   },
 };
 
-class SeekBar extends React.Component {
+class Seekbar extends React.Component {
   state = {
     value: 0,
     isHandleDragged: false,
@@ -106,7 +106,7 @@ class SeekBar extends React.Component {
   }
 }
 
-SeekBar.propTypes = {
+Seekbar.propTypes = {
   duration: PropTypes.number.isRequired,
   isPlaybackActive: PropTypes.bool.isRequired,
 
@@ -115,10 +115,10 @@ SeekBar.propTypes = {
   onPlaybackResume: PropTypes.func,
 };
 
-SeekBar.defaultProps = {
+Seekbar.defaultProps = {
   onSeek: () => {},
   onPlaybackPause: () => {},
   onPlaybackResume: () => {},
 };
 
-export default withStyles(styles)(SeekBar);
+export default withStyles(styles)(Seekbar);
