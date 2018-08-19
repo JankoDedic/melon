@@ -43,10 +43,9 @@ class Player extends React.Component {
         <Seekbar
           duration={this.state.duration}
           progress={this.state.progress}
-          isPlaybackActive={this.state.isPlaybackActive}
           onSeek={(value) => { console.log('You seeked to', value); }}
-          onPlaybackPause={() => { console.log('Playback paused'); }}
-          onPlaybackResume={() => { console.log('Playback resumed'); }}
+          onHandleDragStart={() => { console.log('Playback paused'); }}
+          onHandleDragEnd={() => { console.log('Playback resumed'); }}
         />
         <VolumeSlider />
       </div>

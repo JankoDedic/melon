@@ -18,7 +18,7 @@ class Seekbar extends React.Component {
 
   // NOTE: Slider component sometimes calls onDragStart twice in cases when
   // the click is near the handle. This should not matter in practice, but
-  // you should be aware that you should not rely on onPlaybackPause to
+  // you should be aware that you should not rely on onHandleDragStart to
   // perform any toggling action.
   onDragStart = () => {
     this.setState((prevState, props) => ({
@@ -26,9 +26,7 @@ class Seekbar extends React.Component {
       value: props.progress
     }));
 
-    if (this.props.isPlaybackActive) {
-      this.props.onPlaybackPause();
-    }
+    this.props.onHandleDragStart();
   }
 
   // A click will call onDragEnd -> onHandleChange
@@ -39,9 +37,7 @@ class Seekbar extends React.Component {
   // (via canSeekOnDragEnd boolean).
 
   onDragEnd = () => {
-    if (this.props.isPlaybackActive) {
-      this.props.onPlaybackResume();
-    }
+    this.props.onHandleDragEnd();
 
     let canSeekOnDragEnd = this.state.canSeekOnDragEnd;
 
@@ -87,17 +83,16 @@ class Seekbar extends React.Component {
 Seekbar.propTypes = {
   duration: PropTypes.number.isRequired,
   progress: PropTypes.number.isRequired,
-  isPlaybackActive: PropTypes.bool.isRequired,
 
   onSeek: PropTypes.func,
-  onPlaybackPause: PropTypes.func,
-  onPlaybackResume: PropTypes.func,
+  onHandleDragStart: PropTypes.func,
+  onHandleDragEnd: PropTypes.func,
 };
 
 Seekbar.defaultProps = {
   onSeek: () => {},
-  onPlaybackPause: () => {},
-  onPlaybackResume: () => {},
+  onHandleDragStart: () => {},
+  onHandleDragEnd: () => {},
 };
 
 export default withStyles(styles)(Seekbar);
