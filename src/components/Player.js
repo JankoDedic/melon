@@ -1,5 +1,5 @@
 import React from 'react';
-import SeekBar from './SeekBar';
+import Seekbar from './Seekbar1';
 import VolumeSlider from './VolumeSlider';
 
 class Player extends React.Component {
@@ -17,7 +17,7 @@ class Player extends React.Component {
     return (
       <div>
         <button onClick={this.togglePlayback}>play/pause</button>
-        <SeekBar
+        <Seekbar
           duration={60}
           isPlaybackActive={this.state.isPlaybackActive}
           onSeek={(value) => { console.log('You seeked to', value); }}
