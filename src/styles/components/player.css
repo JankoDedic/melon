@@ -9,6 +9,7 @@
 
 .player {
   align-items: center;
+  background-color: green;
   display: flex;
   height: 60px;
 }
