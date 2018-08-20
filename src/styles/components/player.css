@@ -28,6 +28,7 @@
 .player__seekbar {
   background-color: blue;
   flex: 5;
+  padding-right: 25px;
 }
 
 .player__volume-control {
