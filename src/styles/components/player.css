@@ -21,13 +21,13 @@
 .player__play-pause {
   background-color: red;
   display: flex;
-  flex: 1;
   height: 100%;
   justify-content: center;
+  width: 5rem;
 }
 
 .player__seekbar {
-  background-color: blue;
+  background-color: yellow;
   flex: 5;
   padding-left: 5px;
   padding-right: 25px;
@@ -36,9 +36,9 @@
 .player__volume-control {
   background-color: purple;
   display: flex;
-  flex: 1;
   height: 100%;
   justify-content: center;
+  width: 5rem;
 }
 
 .player__volume-control__slider {
@@ -58,5 +58,5 @@
 
 .player__song-info {
   background-color: white;
-  flex: 3;
+  width: 15rem;
 }
