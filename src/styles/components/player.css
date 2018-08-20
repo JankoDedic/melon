@@ -16,3 +16,29 @@
   max-width: 60rem;
   width: 80%;
 }
+
+.player__play-pause {
+  background-color: red;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.player__seekbar {
+  background-color: blue;
+  flex: 5;
+}
+
+.player__volume-control {
+  background-color: yellow;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.player__song-info {
+  background-color: white;
+  flex: 3;
+}
