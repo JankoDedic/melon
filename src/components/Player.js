@@ -46,6 +46,12 @@ class Player extends React.Component {
     }));
   }
 
+  onPlay = () => {
+    if (!this.state.isPlaybackActive) {
+      this.setState({ isPlaybackActive: true });
+    }
+  }
+
   ref = reactPlayer => {
     this.reactPlayer = reactPlayer;
   }
@@ -64,6 +70,7 @@ class Player extends React.Component {
             muted={this.state.muted}
             onDuration={this.onDuration}
             onProgress={this.onProgress}
+            onPlay={this.onPlay}
           />
 
           <div className="player__play-pause">
