@@ -6,8 +6,8 @@ import Slider from '@material-ui/lab/Slider';
 const styles = {
   root: {
     display: 'flex',
-    height: 150,
-    width: 10,
+    height: '100%',
+    width: '100%',
   },
 };
 

@@ -33,11 +33,21 @@
 }
 
 .player__volume-control {
-  background-color: yellow;
+  background-color: purple;
   display: flex;
   flex: 1;
   height: 100%;
   justify-content: center;
+}
+
+.player__volume-control__slider {
+  background-color: yellow;
+  bottom: 50px;
+  height: 250%;
+  margin-bottom: 0px;
+  padding-bottom: 15px;
+  position: absolute;
+  z-index: 1;
 }
 
 .player__song-info {
