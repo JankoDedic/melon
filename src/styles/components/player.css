@@ -1,10 +1,10 @@
 .player-container {
-  display: flex;
-  position: fixed;
-  bottom: 0;
   background-color: cyan;
-  width: 100%;
+  bottom: 0;
+  display: flex;
   height: 8%;
+  position: fixed;
+  width: 100%;
 }
 
 .player {
