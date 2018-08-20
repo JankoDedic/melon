@@ -73,6 +73,12 @@ class Player extends React.Component {
           </div>
 
           <div className="player__volume-control">
+            <div className="player__volume-control__slider">
+              <VolumeSlider
+                volume={this.state.volume}
+                onVolumeChange={this.onVolumeChange}
+              />
+            </div>
             <button>VOL</button>
           </div>
 
@@ -86,10 +92,5 @@ class Player extends React.Component {
     );
   }
 }
-
-// <VolumeSlider
-//   volume={this.state.volume}
-//   onVolumeChange={this.onVolumeChange}
-// />
 
 export default Player;
