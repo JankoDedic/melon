@@ -14,6 +14,7 @@ class Player extends React.Component {
     duration: 0,
     progress: 0,
     volume: 0.5,
+    muted: false,
   };
 
   togglePlayback = () => {
@@ -39,6 +40,12 @@ class Player extends React.Component {
     this.setState({ volume });
   }
 
+  toggleMute = () => {
+    this.setState((prevState) => ({
+      muted: !prevState.muted
+    }));
+  }
+
   ref = reactPlayer => {
     this.reactPlayer = reactPlayer;
   }
@@ -54,6 +61,7 @@ class Player extends React.Component {
             url="https://youtu.be/0q3ve6ZnxXE"
             playing={this.state.isPlaybackActive}
             volume={this.state.volume}
+            muted={this.state.muted}
             onDuration={this.onDuration}
             onProgress={this.onProgress}
           />
@@ -79,7 +87,7 @@ class Player extends React.Component {
                 onVolumeChange={this.onVolumeChange}
               />
             </div>
-            <button>VOL</button>
+            <button onClick={this.toggleMute}>VOL</button>
           </div>
 
           <div className="player__song-info">
