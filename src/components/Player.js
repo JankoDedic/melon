@@ -45,28 +45,30 @@ class Player extends React.Component {
 
   render() {
     return (
-      <div className="player">
-        <ReactPlayer
-          ref={this.ref}
-          style={reactPlayerStyle}
-          url="https://youtu.be/0q3ve6ZnxXE"
-          playing={this.state.isPlaybackActive}
-          volume={this.state.volume}
-          onDuration={this.onDuration}
-          onProgress={this.onProgress}
-        />
-        <button onClick={this.togglePlayback}>PP</button>
-        <Seekbar
-          duration={this.state.duration}
-          progress={this.state.progress}
-          onSeek={this.onSeek}
-          onHandleDragStart={() => { console.log('Playback paused'); }}
-          onHandleDragEnd={() => { console.log('Playback resumed'); }}
-        />
-        <button>VOL</button>
-        <div className="player__song-info">
-          <p>Ecstasy (Morten Granau Remix)</p>
-          <p>ATB</p>
+      <div className="player-container">
+        <div className="player">
+          <ReactPlayer
+            ref={this.ref}
+            style={reactPlayerStyle}
+            url="https://youtu.be/0q3ve6ZnxXE"
+            playing={this.state.isPlaybackActive}
+            volume={this.state.volume}
+            onDuration={this.onDuration}
+            onProgress={this.onProgress}
+          />
+          <button onClick={this.togglePlayback}>PP</button>
+          <Seekbar
+            duration={this.state.duration}
+            progress={this.state.progress}
+            onSeek={this.onSeek}
+            onHandleDragStart={() => { console.log('Playback paused'); }}
+            onHandleDragEnd={() => { console.log('Playback resumed'); }}
+          />
+          <button>VOL</button>
+          <div className="player__song-info">
+            <p>Ecstasy (Morten Granau Remix)</p>
+            <p>ATB</p>
+          </div>
         </div>
       </div>
     );
