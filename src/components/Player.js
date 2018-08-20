@@ -47,6 +47,7 @@ class Player extends React.Component {
     return (
       <div className="player-container">
         <div className="player">
+
           <ReactPlayer
             ref={this.ref}
             style={reactPlayerStyle}
@@ -56,19 +57,30 @@ class Player extends React.Component {
             onDuration={this.onDuration}
             onProgress={this.onProgress}
           />
-          <button onClick={this.togglePlayback}>PP</button>
-          <Seekbar
-            duration={this.state.duration}
-            progress={this.state.progress}
-            onSeek={this.onSeek}
-            onHandleDragStart={() => { console.log('Playback paused'); }}
-            onHandleDragEnd={() => { console.log('Playback resumed'); }}
-          />
-          <button>VOL</button>
+
+          <div className="player__play-pause">
+            <button onClick={this.togglePlayback}>PP</button>
+          </div>
+
+          <div className="player__seekbar">
+            <Seekbar
+              duration={this.state.duration}
+              progress={this.state.progress}
+              onSeek={this.onSeek}
+              onHandleDragStart={() => { console.log('Playback paused'); }}
+              onHandleDragEnd={() => { console.log('Playback resumed'); }}
+            />
+          </div>
+
+          <div className="player__volume-control">
+            <button>VOL</button>
+          </div>
+
           <div className="player__song-info">
             <p>Ecstasy (Morten Granau Remix)</p>
             <p>ATB</p>
           </div>
+
         </div>
       </div>
     );
