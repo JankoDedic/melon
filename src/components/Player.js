@@ -77,8 +77,8 @@ class Player extends React.Component {
           </div>
 
           <div className="player__song-info">
-            <p>Ecstasy (Morten Granau Remix)</p>
-            <p>ATB</p>
+            <div>Ecstasy (Morten Granau Remix)</div>
+            <div>ATB</div>
           </div>
 
         </div>
