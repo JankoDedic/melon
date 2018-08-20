@@ -43,11 +43,16 @@
 .player__volume-control__slider {
   background-color: yellow;
   bottom: 50px;
+  display: none;
   height: 250%;
   margin-bottom: 0px;
   padding-bottom: 15px;
   position: absolute;
   z-index: 1;
+}
+
+.player__volume-control:hover .player__volume-control__slider {
+  display: block;
 }
 
 .player__song-info {
