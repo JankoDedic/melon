@@ -3,6 +3,7 @@
   bottom: 0;
   display: flex;
   height: 8%;
+  justify-content: center;
   position: fixed;
   width: 100%;
 }
@@ -12,4 +13,6 @@
   background-color: green;
   display: flex;
   height: 60px;
+  max-width: 60rem;
+  width: 80%;
 }
