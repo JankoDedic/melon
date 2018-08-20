@@ -65,10 +65,6 @@ class Player extends React.Component {
           onHandleDragEnd={() => { console.log('Playback resumed'); }}
         />
         <button>VOL</button>
-        <VolumeSlider
-          volume={this.state.volume}
-          onVolumeChange={this.onVolumeChange}
-        />
         <div className="player__song-info">
           <p>Ecstasy (Morten Granau Remix)</p>
           <p>ATB</p>
@@ -77,5 +73,10 @@ class Player extends React.Component {
     );
   }
 }
+
+// <VolumeSlider
+//   volume={this.state.volume}
+//   onVolumeChange={this.onVolumeChange}
+// />
 
 export default Player;
