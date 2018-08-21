@@ -15,6 +15,7 @@ class Player extends React.Component {
     progress: 0,
     volume: 0.5,
     muted: false,
+    isVolumeSliderBeingDragged: false,
   };
 
   togglePlayback = () => {
@@ -38,6 +39,16 @@ class Player extends React.Component {
 
   onVolumeChange = (volume) => {
     this.setState({ volume });
+  }
+
+  onVolumeHandleDragStart = () => {
+    console.log('vol drag start');
+    this.setState({ isVolumeSliderBeingDragged: true });
+  }
+
+  onVolumeHandleDragEnd = () => {
+    console.log('vol drag end');
+    this.setState({ isVolumeSliderBeingDragged: false });
   }
 
   toggleMute = () => {
@@ -94,6 +105,8 @@ class Player extends React.Component {
               <VolumeSlider
                 volume={this.state.muted ? 0 : this.state.volume}
                 onVolumeChange={this.onVolumeChange}
+                onHandleDragStart={this.onVolumeHandleDragStart}
+                onHandleDragEnd={this.onVolumeHandleDragEnd}
               />
             </div>
             <button onClick={this.toggleMute}>VOL</button>
