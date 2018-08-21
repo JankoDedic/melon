@@ -10,12 +10,11 @@
 }
 
 .player {
+  @extend %content-container;
   align-items: center;
   background-color: green;
   display: flex;
   height: 100%;
-  max-width: 60rem;
-  width: 80%;
 }
 
 .player__play-pause {
