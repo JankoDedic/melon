@@ -2,7 +2,7 @@
   background-color: cyan;
   bottom: 0;
   display: flex;
-  height: 4rem;
+  height: 3rem;
   justify-content: center;
   position: fixed;
   width: 100%;
@@ -43,10 +43,9 @@
 
 .player__volume-control__slider {
   background-color: yellow;
-  bottom: 50px;
+  bottom: 45px;
   display: none;
   height: 250%;
-  margin-bottom: 0px;
   padding-bottom: 15px;
   position: absolute;
   z-index: 2;
