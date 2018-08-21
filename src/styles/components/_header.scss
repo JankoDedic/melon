@@ -1,14 +1,26 @@
 .header-container {
-  background-color: cyan;
+  background-color: rgb(40, 226, 188);
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
 .header {
+  align-items: center;
   background-color: green;
   display: flex;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 1.8rem;
   justify-content: space-between;
   max-width: 60rem;
   width: 80%;
+}
+
+.header__logo {
+  margin: 0.5rem;
+}
+
+.header__logout {
+  font-size: 1.2rem;
+  margin: 0.5rem;
 }
