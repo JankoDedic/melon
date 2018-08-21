@@ -1,3 +1,11 @@
+.song-list {
+  align-items: center;
+  background-color: cyan;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .song-list-item {
   @extend %content-container;
   align-items: center;

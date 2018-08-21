@@ -1,5 +1,5 @@
 import React from 'react';
-import SongListItem from './SongListItem';
+import SongList from './SongList';
 
 export default () => (
   <div className="song-dashboard">
@@ -11,6 +11,6 @@ export default () => (
         <button>Add Song</button>
       </div>
     </div>
-    <SongListItem songTitle="This Is What You Came For" artists="Calvin Harris, Rihanna" />
+    <SongList />
   </div>
 );
