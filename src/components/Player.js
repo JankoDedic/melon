@@ -46,6 +46,10 @@ class Player extends React.Component {
     }));
   }
 
+  // When seeking for the first time on a freshly loaded page, ReactPlayer
+  // will ignore the 'playing' prop we passed to it and play the music anyways.
+  // This callback ensures that our own state stays consistent with
+  // ReactPlayer's state (since we cannot make it *not* play on first seek).
   onPlay = () => {
     this.setState({ isPlaybackActive: true });
   }
