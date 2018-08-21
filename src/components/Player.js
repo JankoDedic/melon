@@ -101,7 +101,13 @@ class Player extends React.Component {
           </div>
 
           <div className="player__volume-control">
-            <div className="player__volume-control__slider">
+            <div
+              className={
+                this.state.isVolumeSliderBeingDragged
+                ? "player__volume-control__slider--visible"
+                : "player__volume-control__slider"
+              }
+            >
               <VolumeSlider
                 volume={this.state.muted ? 0 : this.state.volume}
                 onVolumeChange={this.onVolumeChange}

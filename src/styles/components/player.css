@@ -56,6 +56,17 @@
   display: block;
 }
 
+.player__volume-control__slider--visible {
+  background-color: yellow;
+  bottom: 50px;
+  display: block;
+  height: 250%;
+  margin-bottom: 0px;
+  padding-bottom: 15px;
+  position: absolute;
+  z-index: 2;
+}
+
 .player__song-info {
   background-color: white;
   width: 15rem;
