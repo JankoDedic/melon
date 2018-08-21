@@ -1,0 +1,9 @@
+.song-dashboard {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.song-dashboard__nav {
+  @extend %content-container;
+}
