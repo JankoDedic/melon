@@ -1,7 +1,5 @@
-$example-color: cyan;
-
 .player-container {
-  background-color: $example-color;
+  background-color: cyan;
   bottom: 0;
   display: flex;
   height: 8%;
@@ -59,14 +57,8 @@ $example-color: cyan;
 }
 
 .player__volume-control__slider--visible {
-  background-color: yellow;
-  bottom: 50px;
+  @extend .player__volume-control__slider;
   display: block;
-  height: 250%;
-  margin-bottom: 0px;
-  padding-bottom: 15px;
-  position: absolute;
-  z-index: 2;
 }
 
 .player__song-info {
