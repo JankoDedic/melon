@@ -1,0 +1,26 @@
+.song-list-item {
+  @extend %content-container;
+  align-items: center;
+  background-color: yellow;
+  display: flex;
+  font-size: 1.2rem;
+}
+
+.song-list-item__title {
+  background-color: grey;
+  flex: 9;
+}
+
+.song-list-item__artists {
+  flex: 9;
+}
+
+.song-list-item__edit-button {
+  button {
+    font-size: 1rem;
+  }
+  background-color: grey;
+  display: flex;
+  flex: 2;
+  justify-content: center;
+}
