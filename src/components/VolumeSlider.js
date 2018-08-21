@@ -25,6 +25,8 @@ class VolumeSlider extends React.Component {
           max={1}
           value={this.props.volume}
           onChange={this.handleChange}
+          onDragStart={this.props.onHandleDragStart}
+          onDragEnd={this.props.onHandleDragEnd}
           vertical
           reverse
         />
@@ -37,6 +39,8 @@ VolumeSlider.propTypes = {
   classes: PropTypes.object.isRequired,
   volume: PropTypes.number.isRequired,
   onVolumeChange: PropTypes.func,
+  onHandleDragStart: PropTypes.func,
+  onHandleDragEnd: PropTypes.func,
 };
 
 export default withStyles(styles)(VolumeSlider);
