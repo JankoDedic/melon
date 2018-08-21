@@ -7,7 +7,6 @@
 
 .header {
   align-items: center;
-  background-color: green;
   display: flex;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 1.8rem;
@@ -17,7 +16,16 @@
 }
 
 .header__logo {
+  align-items: center;
+  display: flex;
   margin: 0.5rem;
+}
+
+.header__logo__image {
+  background: url('/images/watermelon.png');
+  background-size: cover;
+  height: 1.8rem;
+  width: 1.8rem;
 }
 
 .header__logout {
