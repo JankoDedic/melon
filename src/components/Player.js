@@ -47,9 +47,7 @@ class Player extends React.Component {
   }
 
   onPlay = () => {
-    if (!this.state.isPlaybackActive) {
-      this.setState({ isPlaybackActive: true });
-    }
+    this.setState({ isPlaybackActive: true });
   }
 
   ref = reactPlayer => {
