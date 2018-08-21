@@ -1,0 +1,14 @@
+.header-container {
+  background-color: cyan;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header {
+  background-color: green;
+  display: flex;
+  justify-content: space-between;
+  max-width: 60rem;
+  width: 80%;
+}
