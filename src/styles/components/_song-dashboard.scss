@@ -1,7 +1,8 @@
 .song-dashboard {
+  align-items: center;
   background-color: cyan;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   width: 100%;
 }
 

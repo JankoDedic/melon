@@ -1,4 +1,5 @@
 import React from 'react';
+import SongListItem from './SongListItem';
 
 export default () => (
   <div className="song-dashboard">
