@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import 'normalize.css/normalize.css';
-import './styles/components/player.css';
+import './styles/components/player.scss';
 
 import Player from './components/Player';
 
