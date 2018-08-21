@@ -3,8 +3,12 @@ import React from 'react';
 export default () => (
   <div className="song-dashboard">
     <div className="song-dashboard__nav">
-      <input type="text" placeholder="Search for songs and artists" />
-      <button>Add Song</button>
+      <div className="song-dashboard__nav__search">
+        <input type="text" placeholder="Search for songs and artists" />
+      </div>
+      <div className="song-dashboard__nav__button">
+        <button>Add Song</button>
+      </div>
     </div>
   </div>
 );

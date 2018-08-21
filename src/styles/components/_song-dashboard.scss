@@ -1,4 +1,5 @@
 .song-dashboard {
+  background-color: cyan;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -6,4 +7,33 @@
 
 .song-dashboard__nav {
   @extend %content-container;
+  background-color: green;
+  display: flex;
+  font-size: 1.3rem;
+  height: 4rem;
+  justify-content: space-between;
+}
+
+.song-dashboard__nav__search {
+  input {
+    height: 100%;
+    width: 100%;
+  }
+  align-items: center;
+  background-color: yellow;
+  box-sizing: border-box;
+  display: flex;
+  margin: 1rem;
+  width: 70%;
+}
+
+.song-dashboard__nav__button {
+  button {
+    height: 100%;
+    width: 100%;
+  }
+  background-color: orange;
+  display: flex;
+  margin: 1rem;
+  width: 30%;
 }
