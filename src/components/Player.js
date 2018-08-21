@@ -66,7 +66,7 @@ class Player extends React.Component {
           <ReactPlayer
             ref={this.ref}
             style={reactPlayerStyle}
-            url="https://youtu.be/0q3ve6ZnxXE"
+            url="https://youtu.be/_gvweJDAIGE"
             playing={this.state.isPlaybackActive}
             volume={this.state.volume}
             muted={this.state.muted}
@@ -100,8 +100,8 @@ class Player extends React.Component {
           </div>
 
           <div className="player__song-info">
-            <div>Ecstasy (Morten Granau Remix)</div>
-            <div>ATB</div>
+            <div>Bazzi</div>
+            <div>Mine</div>
           </div>
 
         </div>
