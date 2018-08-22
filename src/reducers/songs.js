@@ -1,9 +1,4 @@
-const defaultSongs = [
-  { id: 0, title: 'This Is What You Came For', artists: 'Calvin Harris, Rihanna' },
-  { id: 1, title: 'Your Way', artists: 'Frank Sinatra' }
-];
-
-export default (songs = defaultSongs, action) => {
+export default (songs = [], action) => {
   switch (action.type) {
     case 'ADD_SONG':
       return [ ...songs, action.song ];

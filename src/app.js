@@ -30,6 +30,8 @@ const WrappedApp = (
 
 ReactDOM.render(WrappedApp, document.getElementById('app'));
 
+store.dispatch(addSong({ title: 'This Is What You Came For', artists: 'Calvin Harris, Rihanna' }));
+store.dispatch(addSong({ title: 'Your Way', artists: 'Frank Sinatra' }));
 store.dispatch(addSong({ title: 'Fragile', artists: 'Sting' }));
 store.dispatch(editSong(1, { title: 'My Way' }));
 
