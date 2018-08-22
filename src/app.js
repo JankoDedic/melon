@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import { addSong, editSong, removeSong } from './actions/songs';
+import { setTextFilter } from './actions/filters';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
@@ -32,3 +33,6 @@ ReactDOM.render(WrappedApp, document.getElementById('app'));
 store.dispatch(addSong({ title: 'Fragile', artists: 'Sting' }));
 store.dispatch(editSong(1, { title: 'My Way' }));
 store.dispatch(removeSong(1));
+
+store.dispatch(setTextFilter('hello'));
+console.log(store.getState());
