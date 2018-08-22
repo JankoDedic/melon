@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import SongListItem from './SongListItem';
+import selectSongs from '../selectors/songs';
 
 export const SongList = ({ songs }) => (
   <div className="song-list">
@@ -10,7 +11,7 @@ export const SongList = ({ songs }) => (
 );
 
 const mapStateToProps = (state) => ({
-  songs: state.songs,
+  songs: selectSongs(state.songs, state.filters),
 });
 
 export default connect(mapStateToProps)(SongList);

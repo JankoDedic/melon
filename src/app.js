@@ -32,7 +32,5 @@ ReactDOM.render(WrappedApp, document.getElementById('app'));
 
 store.dispatch(addSong({ title: 'Fragile', artists: 'Sting' }));
 store.dispatch(editSong(1, { title: 'My Way' }));
-store.dispatch(removeSong(1));
 
-store.dispatch(setTextFilter('hello'));
 console.log(store.getState());
