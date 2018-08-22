@@ -14,6 +14,18 @@ const App = () => (
   </div>
 );
 
+const AddSongPlaceholder = () => (
+  <div>
+    Add Song page
+  </div>
+);
+
+const EditSongPlaceholder = () => (
+  <div>
+    Edit Song page
+  </div>
+);
+
 const history = createHistory();
 
 const AppRouter = () => (
@@ -21,6 +33,8 @@ const AppRouter = () => (
     <div>
       <Switch>
         <Route path="/dashboard" component={App} />
+        <Route path="/add" component={AddSongPlaceholder} />
+        <Route path="/edit/:id" component={EditSongPlaceholder} />
       </Switch>
     </div>
   </Router>
