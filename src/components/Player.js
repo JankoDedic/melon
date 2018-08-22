@@ -17,7 +17,20 @@ class Player extends React.Component {
     volume: 0.5,
     muted: false,
     isVolumeSliderBeingDragged: false,
+    lastURL: null,
   };
+
+  // If URL changed, reset progress to 0.
+  static getDerivedStateFromProps(props, state) {
+    if (props.nowPlayingSong.url !== state.lastURL) {
+      return {
+        progress: 0,
+        lastURL: props.nowPlayingSong.url,
+      };
+    } else {
+      return null;
+    }
+  }
 
   togglePlayback = () => {
     this.setState((prevState) => ({

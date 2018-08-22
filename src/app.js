@@ -55,6 +55,4 @@ store.dispatch(addSong({
 
 store.dispatch(setNowPlayingSong(firstSong));
 
-setTimeout(() => store.dispatch(setNowPlayingSong(secondSong)), 8000);
-
 console.log(store.getState());
