@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import configureStore from './store/configureStore';
+import { Provider } from 'react-redux';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
+import configureStore from './store/configureStore';
 import Header from './components/Header';
 import Player from './components/Player';
 import SongDashboardPage from './components/SongDashboardPage';
-
-const store = configureStore();
-console.log(store.getState());
 
 const App = () => (
   <div>
@@ -20,4 +18,11 @@ const App = () => (
   </div>
 );
 
-ReactDOM.render(<App />, document.getElementById('app'));
+const store = configureStore();
+const WrappedApp = (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+
+ReactDOM.render(WrappedApp, document.getElementById('app'));
