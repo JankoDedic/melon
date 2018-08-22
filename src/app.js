@@ -10,26 +10,18 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
 import configureStore from './store/configureStore';
-import Header from './components/Header';
-import Player from './components/Player';
-import SongDashboardPage from './components/SongDashboardPage';
 
-const App = () => (
-  <div>
-    <Header />
-    <SongDashboardPage />
-    <Player />
-  </div>
-);
+import AppRouter from './routers/AppRouter';
 
 const store = configureStore();
-const WrappedApp = (
+
+const App = (
   <Provider store={store}>
-    <App />
+    <AppRouter />
   </Provider>
 );
 
-ReactDOM.render(WrappedApp, document.getElementById('app'));
+ReactDOM.render(App, document.getElementById('app'));
 
 const firstSong = {
   title: 'This Is What You Came For',
