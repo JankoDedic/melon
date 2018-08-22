@@ -1,10 +1,13 @@
 import uuid from 'uuid';
 
-export const addSong = (song) => {
-  const { title = '', artists = '' } = song;
+export const addSong = (song = {
+  title: '',
+  artists: '',
+  url: '',
+}) => {
   return {
     type: 'ADD_SONG',
-    song: { id: uuid.v4(), title, artists },
+    song: { id: uuid.v4(), ...song },
   };
 };
 

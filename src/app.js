@@ -30,9 +30,22 @@ const WrappedApp = (
 
 ReactDOM.render(WrappedApp, document.getElementById('app'));
 
-store.dispatch(addSong({ title: 'This Is What You Came For', artists: 'Calvin Harris, Rihanna' }));
-store.dispatch(addSong({ title: 'Your Way', artists: 'Frank Sinatra' }));
-store.dispatch(addSong({ title: 'Fragile', artists: 'Sting' }));
-store.dispatch(editSong(1, { title: 'My Way' }));
+store.dispatch(addSong({
+  title: 'This Is What You Came For',
+  artists: 'Calvin Harris, Rihanna',
+  url: 'https://youtu.be/kOkQ4T5WO9E',
+}));
+
+store.dispatch(addSong({
+  title: 'My Way',
+  artists: 'Frank Sinatra',
+  url: 'https://youtu.be/6E2hYDIFDIU',
+}));
+
+store.dispatch(addSong({
+  title: 'Fragile',
+  artists: 'Sting',
+  url: 'https://youtu.be/lB6a-iD6ZOY',
+}));
 
 console.log(store.getState());
