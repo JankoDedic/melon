@@ -2,9 +2,8 @@ import React from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 
-import Header from '../components/Header';
+import PrivateRoute from './PrivateRoute';
 import SongDashboardPage from '../components/SongDashboardPage';
-import Player from '../components/Player';
 
 const App = () => (
   <div>
@@ -32,9 +31,9 @@ const AppRouter = () => (
   <Router history={history}>
     <div>
       <Switch>
-        <Route path="/dashboard" component={App} />
-        <Route path="/add" component={AddSongPlaceholder} />
-        <Route path="/edit/:id" component={EditSongPlaceholder} />
+        <PrivateRoute path="/dashboard" component={SongDashboardPage} />
+        <PrivateRoute path="/add" component={AddSongPlaceholder} />
+        <PrivateRoute path="/edit/:id" component={EditSongPlaceholder} />
       </Switch>
     </div>
   </Router>
