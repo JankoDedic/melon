@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import ReactPlayer from 'react-player';
 
 import Seekbar from './Seekbar';
@@ -77,7 +78,7 @@ class Player extends React.Component {
           <ReactPlayer
             ref={this.ref}
             style={reactPlayerStyle}
-            url="https://youtu.be/_gvweJDAIGE"
+            url={this.props.nowPlayingSong.url}
             playing={this.state.isPlaybackActive}
             volume={this.state.volume}
             muted={this.state.muted}
@@ -119,8 +120,8 @@ class Player extends React.Component {
           </div>
 
           <div className="player__song-info">
-            <div>Bazzi</div>
-            <div>Mine</div>
+            <div>{this.props.nowPlayingSong.title}</div>
+            <div>{this.props.nowPlayingSong.artists}</div>
           </div>
 
         </div>
@@ -129,4 +130,8 @@ class Player extends React.Component {
   }
 }
 
-export default Player;
+const mapStateToProps = (state) => ({
+  nowPlayingSong: state.nowPlayingSong,
+})
+
+export default connect(mapStateToProps)(Player);

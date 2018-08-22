@@ -37,13 +37,15 @@ const firstSong = {
   url: 'https://youtu.be/kOkQ4T5WO9E',
 };
 
-store.dispatch(addSong(firstSong));
-
-store.dispatch(addSong({
+const secondSong = {
   title: 'My Way',
   artists: 'Frank Sinatra',
   url: 'https://youtu.be/6E2hYDIFDIU',
-}));
+};
+
+store.dispatch(addSong(firstSong));
+
+store.dispatch(addSong(secondSong));
 
 store.dispatch(addSong({
   title: 'Fragile',
@@ -52,5 +54,7 @@ store.dispatch(addSong({
 }));
 
 store.dispatch(setNowPlayingSong(firstSong));
+
+setTimeout(() => store.dispatch(setNowPlayingSong(secondSong)), 8000);
 
 console.log(store.getState());
