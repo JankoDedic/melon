@@ -13,3 +13,8 @@ export const editSong = (id, updates) => ({
   id,
   updates,
 });
+
+export const removeSong = (id) => ({
+  type: 'REMOVE_SONG',
+  id,
+});

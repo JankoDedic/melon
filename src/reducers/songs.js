@@ -18,6 +18,8 @@ export default (songs = defaultSongs, action) => {
           return song;
         }
       });
+    case 'REMOVE_SONG':
+      return songs.filter((song) => song.id !== action.id);
     default:
       return songs;
   }
