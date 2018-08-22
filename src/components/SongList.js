@@ -5,7 +5,7 @@ import SongListItem from './SongListItem';
 
 export const SongList = ({ songs }) => (
   <div className="song-list">
-    {songs.map((song, index) => <SongListItem key={index} song={song} />)}
+    {songs.map((song) => <SongListItem key={song.id} song={song} />)}
   </div>
 );
 
