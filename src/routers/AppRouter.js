@@ -20,7 +20,7 @@ const AppRouter = () => (
   <Router history={history}>
     <div>
       <Switch>
-        <Route component={App} />
+        <Route path="/dashboard" component={App} />
       </Switch>
     </div>
   </Router>
