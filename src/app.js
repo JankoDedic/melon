@@ -26,3 +26,8 @@ const WrappedApp = (
 );
 
 ReactDOM.render(WrappedApp, document.getElementById('app'));
+
+store.dispatch({
+  type: 'ADD_SONG',
+  song: { title: 'Fragile', artists: 'Sting' },
+});

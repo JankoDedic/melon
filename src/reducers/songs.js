@@ -4,6 +4,11 @@ const defaultSongs = [
 ];
 
 export default (songs = defaultSongs, action) => {
-  return songs;
+  switch (action.type) {
+    case 'ADD_SONG':
+      return [ ...songs, action.song ];
+    default:
+      return songs;
+  }
 };
 
