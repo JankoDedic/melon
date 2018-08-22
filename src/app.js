@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
+import { addSong, editSong } from './actions/songs';
+
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
@@ -27,7 +29,5 @@ const WrappedApp = (
 
 ReactDOM.render(WrappedApp, document.getElementById('app'));
 
-store.dispatch({
-  type: 'ADD_SONG',
-  song: { title: 'Fragile', artists: 'Sting' },
-});
+store.dispatch(addSong({ title: 'Fragile', artists: 'Sting' }));
+store.dispatch(editSong(1, { title: 'My Way' }));

@@ -7,3 +7,9 @@ export const addSong = (song) => {
     song: { id: uuid.v4(), title, artists },
   };
 };
+
+export const editSong = (id, updates) => ({
+  type: 'EDIT_SONG',
+  id,
+  updates,
+});
