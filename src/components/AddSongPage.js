@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import ReactPlayer from 'react-player';
 
 import { addSong } from '../actions/songs';
 
@@ -8,6 +9,7 @@ export class AddSongPage extends React.Component {
     title: '',
     artists: '',
     url: '',
+    error: '',
   };
   handleTitleChange = (e) => {
     this.setState({
@@ -27,7 +29,16 @@ export class AddSongPage extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { title, artists, url } = this.state;
-    this.props.addSong(title, artists, url);
+    const isTitleValid = title.length > 0;
+    const isURLValid = ReactPlayer.canPlay(url);
+    if (!isTitleValid) {
+      this.setState({ error: 'Invalid title.' });
+    } else if (!isURLValid) {
+      this.setState({ error: 'Invalid URL. Melon cannot play this media.' });
+    } else {
+      this.props.addSong(title, artists, url);
+      this.props.history.push('/dashboard');
+    }
   }
   render() {
     return (
@@ -35,6 +46,7 @@ export class AddSongPage extends React.Component {
         <div className="add-song__header">
           Add Song
         </div>
+        {this.state.error && <p className="add-song__error">{this.state.error}</p>}
         <form className="add-song__form" onSubmit={this.handleSubmit}>
           <input
             type="text"
