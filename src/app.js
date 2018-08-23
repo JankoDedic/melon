@@ -20,20 +20,11 @@ const store = configureStore();
 const App = (
   <Provider store={store}>
     <div>
-      <Header />
-      <div className="content-container">
-        <AppRouter />
-      </div>
+      <AppRouter />
       <Player />
     </div>
   </Provider>
 );
-
-// const App = (
-//   <Header />
-//   <AppRouter />
-//   <Player />
-// );
 
 ReactDOM.render(App, document.getElementById('app'));
 

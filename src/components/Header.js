@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default () => (
   <div className="header-container">
     <div className="header">
-      <div className="header__logo">
+      <Link className="header__logo" to="/dashboard">
         <div className="header__logo__image"></div>
         Melon
-      </div>
+      </Link>
       <button className="header__logout">Logout</button>
     </div>
   </div>
