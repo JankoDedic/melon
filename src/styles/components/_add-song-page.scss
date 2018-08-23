@@ -5,3 +5,16 @@
   font-style: oblique;
   padding: $s-size 0;
 }
+
+.add-song__form {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  input {
+    margin: 0.5rem 0;
+  }
+  button {
+    width: 10rem;
+  }
+}
