@@ -33,7 +33,7 @@ export default class SongForm extends React.Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    const { title, artists, url } = this.state;
+    const { id, title, artists, url } = this.state;
     const isTitleValid = title.length > 0;
     const isURLValid = ReactPlayer.canPlay(url);
     if (!isTitleValid) {

@@ -6,7 +6,7 @@ import { editSong } from '../actions/songs';
 
 class EditSongPage extends React.Component {
   handleSubmit = (song) => {
-    this.props.editSong(song);
+    this.props.editSong(this.props.song.id, song);
     this.props.history.push('/dashboard');
   }
   render() {
@@ -26,8 +26,8 @@ const mapStateToProps = (state, props) => ({
   song: state.songs.find((song) => song.id === props.match.params.id),
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  editSong: (song) => dispatch(editSong(song)),
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  editSong: (id, updates) => dispatch(editSong(id, updates)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditSongPage);
