@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
+import PropTypes from 'prop-types';
 
 export default class SongForm extends React.Component {
   constructor(props) {
@@ -78,3 +79,12 @@ export default class SongForm extends React.Component {
   }
 }
 
+SongForm.propTypes = {
+  title: PropTypes.string,
+  onSubmit: PropTypes.func,
+  song: PropTypes.shape({
+    title: PropTypes.string,
+    artists: PropTypes.string,
+    url: PropTypes.string,
+  }),
+};
