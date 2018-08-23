@@ -10,7 +10,7 @@
 }
 
 .player {
-  @extend %content-container;
+  @extend .content-container;
   align-items: center;
   background-color: green;
   display: flex;

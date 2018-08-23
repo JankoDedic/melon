@@ -7,7 +7,7 @@
 }
 
 .song-list-item {
-  @extend %content-container;
+  @extend .content-container;
   align-items: center;
   background-color: yellow;
   display: flex;

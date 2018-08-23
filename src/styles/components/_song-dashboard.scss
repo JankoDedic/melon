@@ -7,7 +7,7 @@
 }
 
 .song-dashboard__nav {
-  @extend %content-container;
+  @extend .content-container;
   background-color: green;
   display: flex;
   font-size: 1.3rem;
