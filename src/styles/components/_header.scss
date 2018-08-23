@@ -9,7 +9,7 @@
   @extend .content-container;
   align-items: center;
   display: flex;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-family: $main-font;
   font-size: 1.8rem;
   justify-content: space-between;
 }

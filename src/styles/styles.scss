@@ -1,5 +1,7 @@
 @import './base/base';
+@import './base/settings';
 
+@import './components/add-song-page';
 @import './components/header';
 @import './components/player';
 @import './components/song-dashboard';

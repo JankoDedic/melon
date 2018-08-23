@@ -17,7 +17,7 @@ export default () => (
       />
       <input
         type="text"
-        placeholder="URL (YouTube, Soundcloud...)"
+        placeholder="URL (YouTube, SoundCloud...)"
       />
       <button className="primary-button">Save Song</button>
     </form>
