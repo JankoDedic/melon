@@ -1,4 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+import { addSong } from '../actions/songs';
 
 export class AddSongPage extends React.Component {
   state = {
@@ -23,7 +26,8 @@ export class AddSongPage extends React.Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.title, this.state.artists, this.state.url);
+    const { title, artists, url } = this.state;
+    this.props.addSong(title, artists, url);
   }
   render() {
     return (
@@ -58,4 +62,8 @@ export class AddSongPage extends React.Component {
   }
 }
 
-export default AddSongPage;
+const mapDispatchToProps = (dispatch) => ({
+  addSong: (title, artists, url) => dispatch(addSong({ title, artists, url })),
+})
+
+export default connect(undefined, mapDispatchToProps)(AddSongPage);
