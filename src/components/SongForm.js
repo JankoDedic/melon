@@ -2,12 +2,20 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 
 export default class SongForm extends React.Component {
-  state = {
-    title: '',
-    artists: '',
-    url: '',
-    error: '',
-  };
+  constructor(props) {
+    super(props);
+
+    if (props.song) {
+      this.state = { ...props.song, error: '' };
+    } else {
+      this.state = {
+        title: '',
+        artists: '',
+        url: '',
+        error: '',
+      };
+    }
+  }
   handleTitleChange = (e) => {
     this.setState({
       title: e.target.value,
