@@ -21,7 +21,7 @@ class SongDashboardPage extends React.Component {
             />
           </div>
           <div className="song-dashboard__nav__button">
-            <button>Add Song</button>
+            <button onClick={() => this.props.history.push('/add')}>Add Song</button>
           </div>
         </div>
         <SongList />

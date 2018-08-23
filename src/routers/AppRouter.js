@@ -2,6 +2,8 @@ import React from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 
+import Header from '../components/Header';
+import Player from '../components/Player';
 import PrivateRoute from './PrivateRoute';
 import SongDashboardPage from '../components/SongDashboardPage';
 
@@ -23,6 +25,10 @@ const EditSongPlaceholder = () => (
   <div>
     Edit Song page
   </div>
+);
+
+const SomeComponent = () => (
+  <div>SomeComponent</div>
 );
 
 const history = createHistory();

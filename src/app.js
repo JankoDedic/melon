@@ -12,14 +12,26 @@ import './styles/styles.scss';
 import configureStore from './store/configureStore';
 
 import AppRouter from './routers/AppRouter';
+import Header from './components/Header';
+import Player from './components/Player';
 
 const store = configureStore();
 
 const App = (
   <Provider store={store}>
-    <AppRouter />
+    <div>
+      <Header />
+      <AppRouter />
+      <Player />
+    </div>
   </Provider>
 );
+
+// const App = (
+//   <Header />
+//   <AppRouter />
+//   <Player />
+// );
 
 ReactDOM.render(App, document.getElementById('app'));
 
