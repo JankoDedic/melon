@@ -6,6 +6,11 @@
   padding: $s-size 0;
 }
 
+.add-song__error {
+  color: red;
+  margin: 0;
+}
+
 .add-song__form {
   align-items: left;
   display: flex;
