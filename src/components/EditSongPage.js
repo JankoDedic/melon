@@ -18,7 +18,7 @@ class EditSongPage extends React.Component {
           song={this.props.song}
         />
       </div>
-    )
+    );
   }
 }
 
