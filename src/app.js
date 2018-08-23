@@ -21,7 +21,9 @@ const App = (
   <Provider store={store}>
     <div>
       <Header />
-      <AppRouter />
+      <div className="content-container">
+        <AppRouter />
+      </div>
       <Player />
     </div>
   </Provider>

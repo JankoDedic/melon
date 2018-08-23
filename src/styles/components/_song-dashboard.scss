@@ -7,12 +7,12 @@
 }
 
 .song-dashboard__nav {
-  @extend .content-container;
   background-color: green;
   display: flex;
   font-size: 1.3rem;
   height: 4rem;
   justify-content: space-between;
+  width: 100%;
 }
 
 .song-dashboard__nav__search {

@@ -7,11 +7,11 @@
 }
 
 .song-list-item {
-  @extend .content-container;
   align-items: center;
   background-color: yellow;
   display: flex;
   font-size: 1.2rem;
+  width: 100%;
 }
 
 .song-list-item__info {
