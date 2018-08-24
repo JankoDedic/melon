@@ -18,7 +18,7 @@ import Player from './components/Player';
 import database from './firebase/firebase';
 
 database.ref().set({
-  name: 'Hello, Firebase!'
+  name: 'Hello again, Firebase!'
 });
 
 const store = configureStore();
