@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import { addSong, editSong, removeSong } from './actions/songs';
+import { addSong, startAddSong, editSong, removeSong } from './actions/songs';
 import { setTextFilter } from './actions/filters';
 import { setNowPlayingSong } from './actions/nowPlayingSong';
 
@@ -50,7 +50,7 @@ store.dispatch(addSong(firstSong));
 
 store.dispatch(addSong(secondSong));
 
-store.dispatch(addSong({
+store.dispatch(startAddSong({
   title: 'Fragile',
   artists: 'Sting',
   url: 'https://youtu.be/lB6a-iD6ZOY',

@@ -1,5 +1,7 @@
 import uuid from 'uuid';
 
+import database from '../firebase/firebase';
+
 export const addSong = (song = {
   title: '',
   artists: '',
@@ -8,6 +10,14 @@ export const addSong = (song = {
   return {
     type: 'ADD_SONG',
     song: { id: uuid.v4(), ...song },
+  };
+};
+
+export const startAddSong = (song = {}) => {
+  return (dispatch) => {
+    return database.ref('users/420/songs').push(song).then((ref) => {
+      dispatch(addSong({ id: ref.key, ...song }));
+    });
   };
 };
 

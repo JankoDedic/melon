@@ -2,11 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import SongForm from './SongForm';
-import { addSong } from '../actions/songs';
+import { startAddSong } from '../actions/songs';
 
 class AddSongPage extends React.Component {
   handleSubmit = (song) => {
-    this.props.addSong(song);
+    this.props.startAddSong(song);
     this.props.history.push('/dashboard');
   }
   render() {
@@ -17,7 +17,7 @@ class AddSongPage extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  addSong: (song) => dispatch(addSong(song)),
+  startAddSong: (song) => dispatch(startAddSong(song)),
 });
 
 export default connect(undefined, mapDispatchToProps)(AddSongPage);
