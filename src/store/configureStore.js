@@ -1,10 +1,12 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
 import filtersReducer from '../reducers/filters';
 import songsReducer from '../reducers/songs';
 import nowPlayingSongReducer from '../reducers/nowPlayingSong';
 import authReducer from '../reducers/auth';
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export default () => {
   const store = createStore(
@@ -14,7 +16,7 @@ export default () => {
       nowPlayingSong: nowPlayingSongReducer,
       auth: authReducer,
     }),
-    applyMiddleware(thunk)
+    composeEnhancers(applyMiddleware(thunk))
   );
   return store;
 };
