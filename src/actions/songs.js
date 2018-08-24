@@ -47,6 +47,14 @@ export const editSong = (id, updates) => ({
   updates,
 });
 
+export const startEditSong = (id, updates) => {
+  return (dispatch) => {
+    return database.ref(`users/420/songs/${id}`).update(updates).then(() => {
+        dispatch(editSong(id, updates));
+    });
+  };
+};
+
 export const removeSong = (id) => ({
   type: 'REMOVE_SONG',
   id,
