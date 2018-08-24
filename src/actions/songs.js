@@ -1,5 +1,3 @@
-import uuid from 'uuid';
-
 import database from '../firebase/firebase';
 
 export const setSongs = (songs) => ({
@@ -22,14 +20,10 @@ export const startSetSongs = () => {
   };
 };
 
-export const addSong = (song = {
-  title: '',
-  artists: '',
-  url: '',
-}) => {
+export const addSong = (song) => {
   return {
     type: 'ADD_SONG',
-    song: { id: uuid.v4(), ...song },
+    song,
   };
 };
 
