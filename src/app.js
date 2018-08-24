@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import { addSong, startAddSong, editSong, removeSong } from './actions/songs';
+import { setSongs } from './actions/songs';
 import { setTextFilter } from './actions/filters';
 import { setNowPlayingSong } from './actions/nowPlayingSong';
 
@@ -34,28 +34,21 @@ const App = (
 
 ReactDOM.render(App, document.getElementById('app'));
 
-const firstSong = {
+const songs = [{
+  id: 0,
   title: 'This Is What You Came For',
   artists: 'Calvin Harris, Rihanna',
   url: 'https://youtu.be/kOkQ4T5WO9E',
-};
-
-const secondSong = {
+}, {
+  id: 1,
   title: 'My Way',
   artists: 'Frank Sinatra',
   url: 'https://youtu.be/6E2hYDIFDIU',
-};
-
-store.dispatch(addSong(firstSong));
-
-store.dispatch(addSong(secondSong));
-
-store.dispatch(startAddSong({
+}, {
+  id: 2,
   title: 'Fragile',
   artists: 'Sting',
   url: 'https://youtu.be/lB6a-iD6ZOY',
-}));
+}];
 
-store.dispatch(setNowPlayingSong(firstSong));
-
-console.log(store.getState());
+store.dispatch(setSongs(songs));

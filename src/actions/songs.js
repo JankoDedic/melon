@@ -2,6 +2,11 @@ import uuid from 'uuid';
 
 import database from '../firebase/firebase';
 
+export const setSongs = (songs) => ({
+  type: 'SET_SONGS',
+  songs,
+});
+
 export const addSong = (song = {
   title: '',
   artists: '',
