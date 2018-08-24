@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import SongForm from './SongForm';
-import { startEditSong, removeSong } from '../actions/songs';
+import { startEditSong, startRemoveSong } from '../actions/songs';
 
 class EditSongPage extends React.Component {
   handleSubmit = (song) => {
@@ -10,7 +10,7 @@ class EditSongPage extends React.Component {
     this.props.history.push('/dashboard');
   }
   handleRemove = () => {
-    this.props.removeSong(this.props.song.id);
+    this.props.startRemoveSong(this.props.song.id);
     this.props.history.push('/dashboard');
   }
   render() {
@@ -38,7 +38,7 @@ const mapStateToProps = (state, props) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   startEditSong: (id, updates) => dispatch(startEditSong(id, updates)),
-  removeSong: (id) => dispatch(removeSong(id)),
+  startRemoveSong: (id) => dispatch(startRemoveSong(id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditSongPage);

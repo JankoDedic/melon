@@ -50,7 +50,7 @@ export const editSong = (id, updates) => ({
 export const startEditSong = (id, updates) => {
   return (dispatch) => {
     return database.ref(`users/420/songs/${id}`).update(updates).then(() => {
-        dispatch(editSong(id, updates));
+      dispatch(editSong(id, updates));
     });
   };
 };
@@ -59,3 +59,11 @@ export const removeSong = (id) => ({
   type: 'REMOVE_SONG',
   id,
 });
+
+export const startRemoveSong = (id) => {
+  return (dispatch) => {
+    return database.ref(`users/420/songs/${id}`).remove().then(() => {
+      dispatch(removeSong(id));
+    });
+  };
+};
