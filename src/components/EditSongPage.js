@@ -2,11 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import SongForm from './SongForm';
-import { editSong } from '../actions/songs';
+import { editSong, removeSong } from '../actions/songs';
 
 class EditSongPage extends React.Component {
   handleSubmit = (song) => {
     this.props.editSong(this.props.song.id, song);
+    this.props.history.push('/dashboard');
+  }
+  handleRemove = () => {
+    this.props.removeSong(this.props.song.id);
     this.props.history.push('/dashboard');
   }
   render() {
@@ -17,7 +21,12 @@ class EditSongPage extends React.Component {
           onSubmit={this.handleSubmit}
           song={this.props.song}
         />
-        <button className="form-button">Remove Song</button>
+        <button
+          className="form-button"
+          onClick={this.handleRemove}
+        >
+          Remove Song
+        </button>
       </div>
     );
   }
@@ -29,6 +38,7 @@ const mapStateToProps = (state, props) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   editSong: (id, updates) => dispatch(editSong(id, updates)),
+  removeSong: (id) => dispatch(removeSong(id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditSongPage);
