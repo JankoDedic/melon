@@ -1,4 +1,4 @@
-.add-song__header {
+.song-form__header {
   color: orange;
   font-family: $main-font;
   font-size: 2.2rem;
@@ -6,12 +6,12 @@
   padding: $s-size 0;
 }
 
-.add-song__error {
+.song-form__error {
   color: red;
   margin: 0;
 }
 
-.add-song__form {
+.song-form__form {
   align-items: left;
   display: flex;
   flex-direction: column;

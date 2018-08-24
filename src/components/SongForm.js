@@ -48,11 +48,11 @@ export default class SongForm extends React.Component {
   render() {
     return (
       <div>
-        <div className="add-song__header">
+        <div className="song-form__header">
           {this.props.formTitle}
         </div>
-        {this.state.error && <p className="add-song__error">{this.state.error}</p>}
-        <form className="add-song__form" onSubmit={this.handleSubmit}>
+        {this.state.error && <p className="song-form__error">{this.state.error}</p>}
+        <form className="song-form__form" onSubmit={this.handleSubmit}>
           <input
             type="text"
             placeholder="Title"
