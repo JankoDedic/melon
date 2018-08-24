@@ -7,6 +7,21 @@ export const setSongs = (songs) => ({
   songs,
 });
 
+export const startSetSongs = () => {
+  return (dispatch) => {
+    return database.ref('users/420/songs').once('value').then((snapshot) => {
+      const songs = [];
+      snapshot.forEach((childSnapshot) => {
+        songs.push({
+          id: childSnapshot.key,
+          ...childSnapshot.val()
+        });
+      });
+      dispatch(setSongs(songs));
+    });
+  };
+};
+
 export const addSong = (song = {
   title: '',
   artists: '',
