@@ -2,6 +2,8 @@ export default (songs = [], action) => {
   switch (action.type) {
     case 'SET_SONGS':
       return action.songs;
+    case 'CLEAR_SONGS':
+      return [];
     case 'ADD_SONG':
       return [ ...songs, action.song ];
     case 'EDIT_SONG':

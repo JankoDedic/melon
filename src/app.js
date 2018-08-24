@@ -6,8 +6,8 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
 import configureStore from './store/configureStore';
-import { startSetSongs } from './actions/songs';
-import AppRouter from './routers/AppRouter';
+import { startSetSongs, clearSongs } from './actions/songs';
+import AppRouter, { history } from './routers/AppRouter';
 import Player from './components/Player';
 import { firebase } from './firebase/firebase';
 
@@ -22,14 +22,20 @@ const App = (
   </Provider>
 );
 
-ReactDOM.render(App, document.getElementById('app'));
-
-store.dispatch(startSetSongs());
+const renderApp = () => {
+  ReactDOM.render(App, document.getElementById('app'));
+};
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     console.log('login');
+    store.dispatch(startSetSongs()).then(() => {
+      renderApp();
+      history.push('/dashboard');
+    });
   } else {
     console.log('logout');
+    store.dispatch(clearSongs());
   }
+  renderApp();
 });

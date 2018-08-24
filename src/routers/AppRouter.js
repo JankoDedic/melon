@@ -8,7 +8,7 @@ import AddSongPage from '../components/AddSongPage';
 import EditSongPage from '../components/EditSongPage';
 import Header from '../components/Header';
 
-const history = createHistory();
+export const history = createHistory();
 
 const AppRouter = () => (
   <Router history={history}>

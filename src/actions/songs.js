@@ -20,6 +20,10 @@ export const startSetSongs = () => {
   };
 };
 
+export const clearSongs = () => ({
+  type: 'CLEAR_SONGS',
+});
+
 export const addSong = (song) => {
   return {
     type: 'ADD_SONG',
