@@ -15,6 +15,12 @@ import AppRouter from './routers/AppRouter';
 import Header from './components/Header';
 import Player from './components/Player';
 
+import database from './firebase/firebase';
+
+database.ref().set({
+  name: 'Hello, Firebase!'
+});
+
 const store = configureStore();
 
 const App = (
