@@ -10,6 +10,7 @@ import { startSetSongs, clearSongs } from './actions/songs';
 import AppRouter, { history } from './routers/AppRouter';
 import Player from './components/Player';
 import { firebase } from './firebase/firebase';
+import { login, logout } from './actions/auth';
 
 const store = configureStore();
 
@@ -28,12 +29,13 @@ const renderApp = () => {
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    console.log('login');
+    store.dispatch(login(user.uid));
     store.dispatch(startSetSongs()).then(() => {
       renderApp();
       history.push('/dashboard');
     });
   } else {
+    store.dispatch(logout());
     console.log('logout');
     store.dispatch(clearSongs());
   }
