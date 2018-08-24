@@ -17,6 +17,7 @@ class EditSongPage extends React.Component {
           onSubmit={this.handleSubmit}
           song={this.props.song}
         />
+        <button className="form-button">Remove Song</button>
       </div>
     );
   }
