@@ -11,20 +11,18 @@ import AppRouter, { history } from './routers/AppRouter';
 import Player from './components/Player';
 import { firebase } from './firebase/firebase';
 import { login, logout } from './actions/auth';
+import App from './components/App';
 
 const store = configureStore();
 
-const App = (
+const jsx = (
   <Provider store={store}>
-    <div>
-      <AppRouter />
-      <Player />
-    </div>
+    <App />
   </Provider>
 );
 
 const renderApp = () => {
-  ReactDOM.render(App, document.getElementById('app'));
+  ReactDOM.render(jsx, document.getElementById('app'));
 };
 
 firebase.auth().onAuthStateChanged((user) => {
