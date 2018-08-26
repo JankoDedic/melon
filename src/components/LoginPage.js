@@ -6,7 +6,7 @@ import { startLogin } from '../actions/auth';
 
 export const LoginPage = ({ startLogin }) => (
   <div>
-    <Logo />
+    <Logo className="login-page__logo" />
     <div>
       One music collection. Any stream.
     </div>

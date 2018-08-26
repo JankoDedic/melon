@@ -1,0 +1,7 @@
+@import './logo';
+
+.login-page {
+  &__logo {
+    @include logo(3.6rem);
+  }
+}
