@@ -9,7 +9,7 @@ export const Header = ({ startLogin, startLogout }) => (
   <div className="header-container">
     <div className="header">
       <Link className="router-link" to="/dashboard">
-        <Logo />
+        <Logo className="header__logo" />
       </Link>
       <button className="header__logout" onClick={startLogout}>Logout</button>
     </div>
