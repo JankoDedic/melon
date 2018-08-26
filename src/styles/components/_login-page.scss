@@ -1,7 +1,32 @@
 @import './logo';
 
+.login-page-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
 .login-page {
+  align-items: center;
+  background-color: $main-color;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  font-family: $secondary-font;
+  font-size: 1.2rem;
+  margin: auto;
+  width: 20rem;
+
+  > * {
+    margin: 0.5rem 0;
+  }
+
   &__logo {
     @include logo(3.6rem);
+  }
+
+  &__slogan {
+    font-style: oblique;
   }
 }

@@ -1,11 +1,10 @@
 @mixin logo($size) {
   align-items: center;
-  background-color: rgb(40, 226, 188);
+  background-color: $main-color;
   color: black;
   display: flex;
   font-family: $main-font;
   font-size: 0.9 * $size;
-  margin: 0.5rem;
 
   &__image {
     background: url('/images/watermelon.png');

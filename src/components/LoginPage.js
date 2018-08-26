@@ -5,12 +5,19 @@ import Logo from './Logo';
 import { startLogin } from '../actions/auth';
 
 export const LoginPage = ({ startLogin }) => (
-  <div>
-    <Logo className="login-page__logo" />
-    <div>
-      One music collection. Any stream.
+  <div className="login-page-container">
+    <div className="login-page">
+      <Logo className="login-page__logo" />
+      <div className="login-page__slogan">
+        One music collection. Any stream.
+      </div>
+      <button
+        className="login-page__button"
+        onClick={startLogin}
+      >
+        Login with Google
+      </button>
     </div>
-    <button onClick={startLogin}>Login with Google</button>
   </div>
 );
 
