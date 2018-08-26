@@ -9,6 +9,20 @@
   text-decoration: none;
 }
 
+.logo {
+  align-items: center;
+  color: black;
+  display: flex;
+  margin: 0.5rem;
+
+  &__image {
+    background: url('/images/watermelon.png');
+    background-size: cover;
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+}
+
 .header {
   @extend .content-container;
 
@@ -17,20 +31,6 @@
   font-family: $main-font;
   font-size: 1.8rem;
   justify-content: space-between;
-
-  &__logo {
-    align-items: center;
-    color: black;
-    display: flex;
-    margin: 0.5rem;
-
-    &__image {
-      background: url('/images/watermelon.png');
-      background-size: cover;
-      height: 1.8rem;
-      width: 1.8rem;
-    }
-  }
 
   &__logout {
     font-size: 1rem;
