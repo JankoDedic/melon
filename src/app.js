@@ -38,6 +38,7 @@ firebase.auth().onAuthStateChanged((user) => {
     store.dispatch(logout());
     console.log('logout');
     store.dispatch(clearSongs());
+    history.push('/');
   }
   renderApp();
 });

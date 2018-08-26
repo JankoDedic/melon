@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { startLogin, startLogout } from '../actions/auth';
+import { startLogout } from '../actions/auth';
 
 export const Header = ({ startLogin, startLogout }) => (
   <div className="header-container">
@@ -11,14 +11,12 @@ export const Header = ({ startLogin, startLogout }) => (
         <div className="header__logo__image"></div>
         Melon
       </Link>
-      <button className="header__logout" onClick={startLogin}>Login</button>
-      <button onClick={startLogout}>Logout</button>
+      <button className="header__logout" onClick={startLogout}>Logout</button>
     </div>
   </div>
 );
 
 const mapDispatchToProps = (dispatch) => ({
-  startLogin: () => dispatch(startLogin()),
   startLogout: () => dispatch(startLogout()),
 });
 
