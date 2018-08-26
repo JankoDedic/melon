@@ -14,12 +14,15 @@
   justify-content: space-between;
 }
 
+.router-link {
+  text-decoration: none;
+}
+
 .header__logo {
   align-items: center;
   color: black;
   display: flex;
   margin: 0.5rem;
-  text-decoration: none;
 }
 
 .header__logo__image {

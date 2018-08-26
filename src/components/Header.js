@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { startLogout } from '../actions/auth';
+import Logo from './Logo';
 
 export const Header = ({ startLogin, startLogout }) => (
   <div className="header-container">
     <div className="header">
-      <Link className="header__logo" to="/dashboard">
-        <div className="header__logo__image"></div>
-        Melon
+      <Link className="router-link" to="/dashboard">
+        <Logo />
       </Link>
       <button className="header__logout" onClick={startLogout}>Logout</button>
     </div>
