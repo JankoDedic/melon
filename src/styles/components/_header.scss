@@ -5,34 +5,35 @@
   width: 100%;
 }
 
+.router-link {
+  text-decoration: none;
+}
+
 .header {
   @extend .content-container;
+
   align-items: center;
   display: flex;
   font-family: $main-font;
   font-size: 1.8rem;
   justify-content: space-between;
-}
 
-.router-link {
-  text-decoration: none;
-}
+  &__logo {
+    align-items: center;
+    color: black;
+    display: flex;
+    margin: 0.5rem;
 
-.header__logo {
-  align-items: center;
-  color: black;
-  display: flex;
-  margin: 0.5rem;
-}
+    &__image {
+      background: url('/images/watermelon.png');
+      background-size: cover;
+      height: 1.8rem;
+      width: 1.8rem;
+    }
+  }
 
-.header__logo__image {
-  background: url('/images/watermelon.png');
-  background-size: cover;
-  height: 1.8rem;
-  width: 1.8rem;
-}
-
-.header__logout {
-  font-size: 1rem;
-  margin: 0.5rem;
+  &__logout {
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
 }
