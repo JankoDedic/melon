@@ -1,0 +1,15 @@
+@mixin logo($size) {
+  align-items: center;
+  color: black;
+  display: flex;
+  font-family: $main-font;
+  font-size: 0.9 * $size;
+  margin: 0.5rem;
+
+  &__image {
+    background: url('/images/watermelon.png');
+    background-size: cover;
+    height: $size;
+    width: $size;
+  }
+}
