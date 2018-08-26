@@ -1,5 +1,6 @@
 @mixin logo($size) {
   align-items: center;
+  background-color: rgb(40, 226, 188);
   color: black;
   display: flex;
   font-family: $main-font;
