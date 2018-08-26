@@ -9,7 +9,7 @@
   text-decoration: none;
 }
 
-.logo {
+@mixin logo($size) {
   align-items: center;
   color: black;
   display: flex;
@@ -18,9 +18,13 @@
   &__image {
     background: url('/images/watermelon.png');
     background-size: cover;
-    height: 1.8rem;
-    width: 1.8rem;
+    height: $size;
+    width: $size;
   }
+}
+
+.logo {
+  @include logo(1.8rem);
 }
 
 .header {
