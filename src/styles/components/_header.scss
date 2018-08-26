@@ -13,6 +13,8 @@
   align-items: center;
   color: black;
   display: flex;
+  font-family: $main-font;
+  font-size: 0.9 * $size;
   margin: 0.5rem;
 
   &__image {
@@ -24,7 +26,7 @@
 }
 
 .logo {
-  @include logo(1.8rem);
+  @include logo(2rem);
 }
 
 .header {
@@ -33,7 +35,6 @@
   align-items: center;
   display: flex;
   font-family: $main-font;
-  font-size: 1.8rem;
   justify-content: space-between;
 
   &__logout {
