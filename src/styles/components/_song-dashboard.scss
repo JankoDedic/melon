@@ -19,27 +19,39 @@
     width: 100%;
 
     &__search {
-      input {
-        height: 100%;
-        width: 100%;
-      }
       align-items: center;
-      background-color: yellow;
       box-sizing: border-box;
       display: flex;
       margin: 1rem;
       width: 70%;
+      input {
+        background-color: rgb(242, 242, 242);
+        border: none;
+        color: black;
+        height: 100%;
+        padding-left: 0.5rem;
+        width: 100%;
+      }
     }
 
     &__button {
-      background-color: orange;
       display: flex;
       margin: 1rem;
       width: 30%;
 
       button {
+        background-color: #FFC157;
+        border: none;
+        border-radius: 50px;
         height: 100%;
         width: 100%;
+        &:hover {
+          border: 1px solid;
+          border-color: #FFA100;
+        }
+        &:active {
+          background-color: #FFA100;
+        }
       }
     }
   }
