@@ -5,7 +5,7 @@ import AppRouter from '../routers/AppRouter';
 import Player from './Player';
 
 export const App = ({ isUserAuthenticated }) => (
-  <div>
+  <div className="app">
     <AppRouter />
     {isUserAuthenticated && <Player />}
   </div>
