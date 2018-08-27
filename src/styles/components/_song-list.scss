@@ -1,6 +1,5 @@
 .song-list {
   align-items: center;
-  background-color: cyan;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -8,32 +7,33 @@
 
 .song-list-item {
   align-items: center;
+  background-color: black;
+  border-bottom: 1px solid grey;
   display: flex;
   font-size: 1.2rem;
+  padding: 0.5rem;
   width: 100%;
 
   &__info {
+    color: rgb(216, 216, 216);
     display: flex;
     flex: 18;
 
     &__title {
-      background-color: grey;
       flex: 1;
     }
 
     &__artists {
-      background-color: lightgray;
       flex: 1;
     }
   }
 
   &__edit-button {
-    button {
-      font-size: 1rem;
-    }
-    background-color: grey;
     display: flex;
     flex: 2;
     justify-content: center;
+    button {
+      font-size: 1rem;
+    }
   }
 }
