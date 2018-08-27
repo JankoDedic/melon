@@ -11,29 +11,29 @@
   display: flex;
   font-size: 1.2rem;
   width: 100%;
-}
 
-.song-list-item__info {
-  display: flex;
-  flex: 18;
-}
+  &__info {
+    display: flex;
+    flex: 18;
 
-.song-list-item__info__title {
-  background-color: grey;
-  flex: 1;
-}
+    &__title {
+      background-color: grey;
+      flex: 1;
+    }
 
-.song-list-item__info__artists {
-  background-color: lightgray;
-  flex: 1;
-}
-
-.song-list-item__edit-button {
-  button {
-    font-size: 1rem;
+    &__artists {
+      background-color: lightgray;
+      flex: 1;
+    }
   }
-  background-color: grey;
-  display: flex;
-  flex: 2;
-  justify-content: center;
+
+  &__edit-button {
+    button {
+      font-size: 1rem;
+    }
+    background-color: grey;
+    display: flex;
+    flex: 2;
+    justify-content: center;
+  }
 }
