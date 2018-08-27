@@ -12,10 +12,10 @@ export const LoginPage = ({ startLogin }) => (
         One music collection. Any stream.
       </div>
       <button
+        type="button"
         className="login-page__button"
         onClick={startLogin}
       >
-        Login with Google
       </button>
     </div>
   </div>

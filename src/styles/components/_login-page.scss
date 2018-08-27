@@ -36,4 +36,31 @@
     color: white;
     font-style: oblique;
   }
+
+  &__button {
+    $height: 3rem;
+    $width: 4.15 * $height;
+
+    background: url('/images/btn_google_signin_dark_normal.png');
+    background-size: cover;
+    border: none;
+    height: $height;
+    width: $width;
+
+    &:hover {
+      background: url('/images/btn_google_signin_dark_focus.png');
+      background-size: cover;
+      cursor: pointer;
+    }
+
+    &:focus {
+      background: url('/images/btn_google_signin_dark_focus.png');
+      background-size: cover;
+    }
+
+    &:active {
+      background: url('/images/btn_google_signin_dark_pressed.png');
+      background-size: cover;
+    }
+  }
 }
