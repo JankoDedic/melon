@@ -45,7 +45,12 @@ export default class SongForm extends React.Component {
       this.props.onSubmit({ title, artists, url });
     }
   }
+  handleRemove = (e) => {
+    e.preventDefault();
+    this.props.onRemove();
+  }
   render() {
+    const { removeButton } = this.props;
     return (
       <div>
         <div className="song-form__header">
@@ -72,7 +77,10 @@ export default class SongForm extends React.Component {
             value={this.state.url}
             onChange={this.handleURLChange}
           />
-          <button className="primary-button">Save Song</button>
+          <div className="song-form__form__buttons">
+            <button className="primary-button">Save Song</button>
+            {removeButton && <button onClick={this.handleRemove}>Remove Song</button>}
+          </div>
         </form>
       </div>
     );

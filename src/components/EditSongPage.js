@@ -19,14 +19,10 @@ class EditSongPage extends React.Component {
         <SongForm
           formTitle="Edit Song"
           onSubmit={this.handleSubmit}
+          removeButton={true}
+          onRemove={this.handleRemove}
           song={this.props.song}
         />
-        <button
-          className="form-button"
-          onClick={this.handleRemove}
-        >
-          Remove Song
-        </button>
       </div>
     );
   }

@@ -19,8 +19,9 @@
   input {
     margin: 0.5rem 0;
   }
-  button {
-    width: 10rem;
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
