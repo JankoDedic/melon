@@ -10,9 +10,7 @@ export const SongListItem = ({ song, setNowPlayingSong }) => (
       <div className="song-list-item__info__title">{song.title}</div>
       <div className="song-list-item__info__artists">{song.artists}</div>
     </div>
-    <div className="song-list-item__edit-button">
-      <Link to={`/edit/${song.id}`}>Edit</Link>
-    </div>
+    <Link className="router-link song-list-item__edit_button" to={`/edit/${song.id}`}>edit</Link>
   </div>
 );
 

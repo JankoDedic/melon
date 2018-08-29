@@ -28,22 +28,36 @@
     }
   }
 
-  &__edit-button {
+  &:hover {
+    background: #094DB2;
+  }
+
+  &:active {
+    background: #1364DB;
+  }
+
+  &__edit_button {
     visibility: hidden;
   }
 
   &:hover {
-    .song-list-item__edit-button {
+    .song-list-item__edit_button {
       visibility: visible;
     }
   }
 
-  &__edit-button {
+  &__edit_button {
+    color: #28E2BE;
     display: flex;
     flex: 2;
+    font-family: $main-font;
+    font-size: 1rem;
     justify-content: center;
-    button {
-      font-size: 1rem;
+    &:hover {
+      color: #7EF0DA;
+    }
+    &:active {
+      color: #FF6400;
     }
   }
 }
