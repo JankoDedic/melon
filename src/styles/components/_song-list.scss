@@ -29,6 +29,16 @@
   }
 
   &__edit-button {
+    visibility: hidden;
+  }
+
+  &:hover {
+    .song-list-item__edit-button {
+      visibility: visible;
+    }
+  }
+
+  &__edit-button {
     display: flex;
     flex: 2;
     justify-content: center;
