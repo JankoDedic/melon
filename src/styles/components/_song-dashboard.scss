@@ -31,7 +31,7 @@
       input {
         background-color: black;
         border: none;
-        color: rgb(216, 216, 216);
+        color: $off-white;
         height: 100%;
         padding-left: 0.5rem;
         width: 100%;
@@ -44,19 +44,9 @@
       width: 30%;
 
       button {
-        background-color: #00D9AF;
-        border: none;
-        border-radius: 50px;
+        @extend .main-button;
         height: 100%;
         width: 100%;
-        &:hover {
-          border: 2px solid;
-          border-color: #4FE9CA;
-        }
-        &:active {
-          background-color: #00AD8B;
-          border: none;
-        }
       }
     }
   }

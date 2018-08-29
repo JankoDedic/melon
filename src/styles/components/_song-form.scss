@@ -1,9 +1,9 @@
 .song-form__header {
-  color: orange;
+  color: #397EE4;
   font-family: $main-font;
   font-size: 2.2rem;
   font-style: oblique;
-  padding: $s-size 0;
+  padding: $s-size 0 0.6rem 0;
 }
 
 .song-form__error {
@@ -13,15 +13,26 @@
 
 .song-form__form {
   align-items: left;
+  background-color: $off-black;
   display: flex;
   flex-direction: column;
   font-size: 1.2rem;
-  input {
+  padding: 0.5rem 1rem;
+  > * {
     margin: 0.5rem 0;
+  }
+  input {
+    background: black;
+    border: none;
+    color: $off-white;
+    padding: 0.5rem 0 0.5rem 0.5rem;
   }
   &__buttons {
     display: flex;
     justify-content: space-between;
+    button {
+      @extend .main-button;
+    }
   }
 }
 
