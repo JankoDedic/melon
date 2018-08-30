@@ -60,6 +60,7 @@ export default class SongForm extends React.Component {
         <form className="song-form__form" onSubmit={this.handleSubmit}>
           <input
             type="text"
+            spellcheck="false"
             placeholder="Title"
             autoFocus
             value={this.state.title}
@@ -67,12 +68,14 @@ export default class SongForm extends React.Component {
           />
           <input
             type="text"
+            spellcheck="false"
             placeholder="Artists"
             value={this.state.artists}
             onChange={this.handleArtistsChange}
           />
           <input
             type="text"
+            spellcheck="false"
             placeholder="URL (YouTube, SoundCloud...)"
             value={this.state.url}
             onChange={this.handleURLChange}
