@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgb(30, 30, 30);
+}
+
+.app {
+  height: 100%;
+  width: 100%;
+}
+
 button {
   cursor: pointer;
 }
