@@ -100,8 +100,7 @@ class Player extends React.Component {
             onStart={this.onStart}
           />
 
-          <div className="player__play-pause">
-            <button onClick={this.togglePlayback}>PP</button>
+          <div onClick={this.togglePlayback} className="player__play-pause">
           </div>
 
           <div className="player__seekbar">

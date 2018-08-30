@@ -1,7 +1,4 @@
 .player-container {
-  // background-color: #1364DB;
-  // background-color: #FF9957;
-  // background-color: rgb(180, 180, 180);
   background-color: $off-black;
   bottom: 0;
   display: flex;
@@ -22,10 +19,12 @@
 
 .player__play-pause {
   // background-color: red;
+  background: url('/images/play.png');
+  background-size: cover;
   display: flex;
   height: 100%;
   justify-content: center;
-  width: 5rem;
+  width: 3rem;
 }
 
 .player__seekbar {
