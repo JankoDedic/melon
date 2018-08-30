@@ -82,4 +82,14 @@
 .player__song-info {
   color: rgb(216, 216, 216);
   width: 15rem;
+  &__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &__artists {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }

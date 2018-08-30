@@ -159,8 +159,8 @@ class Player extends React.Component {
           </div>
 
           <div className="player__song-info">
-            <div>{this.props.nowPlayingSong.title}</div>
-            <div>{this.props.nowPlayingSong.artists}</div>
+            <div className="player__song-info__title">{this.props.nowPlayingSong.title}</div>
+            <div className="player__song-info__artists">{this.props.nowPlayingSong.artists}</div>
           </div>
 
         </div>
