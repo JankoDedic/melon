@@ -52,6 +52,11 @@
     background-size: cover;
     height: 3rem;
     width: 3rem;
+    &--muted {
+      @extend .player__volume-control__button;
+      background: url('/images/muted.png');
+      background-size: cover;
+    }
   }
 }
 
