@@ -61,11 +61,11 @@
 }
 
 .player__volume-control__slider {
-  // background-color: yellow;
+  background-color: $off-black;
   bottom: 45px;
   display: none;
   height: 250%;
-  padding-bottom: 15px;
+  padding: 10px 0;
   position: absolute;
   z-index: 2;
 }
