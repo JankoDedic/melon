@@ -9,6 +9,12 @@ const styles = {
     height: '100%',
     width: '100%',
   },
+  thumb: {
+    backgroundColor: 'red',
+  },
+  track: {
+    backgroundColor: 'red',
+  },
 };
 
 class VolumeSlider extends React.Component {
@@ -22,6 +28,10 @@ class VolumeSlider extends React.Component {
     return (
       <div className={classes.root}>
         <Slider
+          classes={{
+            thumb: classes.thumb,
+            track: classes.track,
+          }}
           max={1}
           value={this.props.volume}
           onChange={this.handleChange}

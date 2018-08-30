@@ -7,6 +7,12 @@ const styles = {
   root: {
     width: '100%',
   },
+  thumb: {
+    backgroundColor: '#28E2BE',
+  },
+  track: {
+    backgroundColor: '#28E2BE',
+  },
 };
 
 class Seekbar extends React.Component {
@@ -68,6 +74,10 @@ class Seekbar extends React.Component {
     return (
       <div className={classes.root}>
         <Slider
+          classes={{
+            thumb: classes.thumb,
+            track: classes.track,
+          }}
           max={this.props.duration}
           value={isHandleDragged ? value : progress}
           aria-labelledby="label"

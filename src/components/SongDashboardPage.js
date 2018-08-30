@@ -15,7 +15,7 @@ class SongDashboardPage extends React.Component {
           <div className="song-dashboard__nav__search">
             <input
               type="text"
-              spellcheck="false"
+              spellCheck="false"
               placeholder="Search for songs and artists"
               onChange={this.onTextChange}
               value={this.props.text}

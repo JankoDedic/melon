@@ -1,5 +1,8 @@
 .player-container {
-  background-color: cyan;
+  // background-color: #1364DB;
+  // background-color: #FF9957;
+  // background-color: rgb(180, 180, 180);
+  background-color: $off-black;
   bottom: 0;
   display: flex;
   height: 3rem;
@@ -12,13 +15,13 @@
 .player {
   @extend .content-container;
   align-items: center;
-  background-color: green;
+  // background-color: green;
   display: flex;
   height: 100%;
 }
 
 .player__play-pause {
-  background-color: red;
+  // background-color: red;
   display: flex;
   height: 100%;
   justify-content: center;
@@ -26,14 +29,14 @@
 }
 
 .player__seekbar {
-  background-color: yellow;
+  // background-color: yellow;
   flex: 5;
   padding-left: 5px;
   padding-right: 25px;
 }
 
 .player__volume-control {
-  background-color: purple;
+  // background-color: purple;
   display: flex;
   height: 100%;
   justify-content: center;
@@ -41,7 +44,7 @@
 }
 
 .player__volume-control__slider {
-  background-color: yellow;
+  // background-color: yellow;
   bottom: 45px;
   display: none;
   height: 250%;
