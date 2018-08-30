@@ -24,7 +24,7 @@ class Player extends React.Component {
   static getDerivedStateFromProps(props, state) {
     if (props.nowPlayingSong.url !== state.lastURL) {
       return {
-        isPlaybackActive: false,
+        isPlaybackActive: true,
         progress: 0,
         lastURL: props.nowPlayingSong.url,
       };
@@ -100,8 +100,21 @@ class Player extends React.Component {
             onStart={this.onStart}
           />
 
-          <div onClick={this.togglePlayback} className="player__play-pause">
-          </div>
+          {
+            this.state.isPlaybackActive ? (
+              <div
+                onClick={this.togglePlayback}
+                className="player__play-pause"
+              >
+              </div>
+            ) : (
+              <div
+                onClick={this.togglePlayback}
+                className="player__play-pause--paused"
+              >
+              </div>
+            )
+          }
 
           <div className="player__seekbar">
             <Seekbar

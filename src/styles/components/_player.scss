@@ -19,12 +19,18 @@
 
 .player__play-pause {
   // background-color: red;
-  background: url('/images/play.png');
+  background: url('/images/pause.png');
   background-size: cover;
   display: flex;
   height: 100%;
   justify-content: center;
   width: 3rem;
+}
+
+.player__play-pause--paused {
+  @extend .player__play-pause;
+  background: url('/images/play.png');
+  background-size: cover;
 }
 
 .player__seekbar {
