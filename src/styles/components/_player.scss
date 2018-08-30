@@ -40,6 +40,13 @@
   height: 100%;
   justify-content: center;
   width: 5rem;
+
+  &__button {
+    background: url('/images/volume.png');
+    background-size: cover;
+    height: 3rem;
+    width: 3rem;
+  }
 }
 
 .player__volume-control__slider {

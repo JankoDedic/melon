@@ -10,10 +10,10 @@ const styles = {
     width: '100%',
   },
   thumb: {
-    backgroundColor: 'red',
+    backgroundColor: '#28E2BE',
   },
   track: {
-    backgroundColor: 'red',
+    backgroundColor: '#28E2BE',
   },
 };
 

@@ -128,7 +128,11 @@ class Player extends React.Component {
                 onHandleDragEnd={this.onVolumeHandleDragEnd}
               />
             </div>
-            <button onClick={this.toggleMute}>VOL</button>
+            <div
+              className="player__volume-control__button"
+              onClick={this.toggleMute}
+            >
+            </div>
           </div>
 
           <div className="player__song-info">
