@@ -16,6 +16,7 @@
   font-family: $secondary-font;
   font-size: 1.2rem;
   margin: auto;
+  padding-bottom: 0.5rem;
   width: 20rem;
 
   > * {
@@ -64,7 +65,9 @@
   }
 
   &__guest-login-button {
-    height: 3rem;
-    width: 4.15 * 3rem;
+    @extend .main-button;
+    font-family: $main-font;
+    height: 2rem;
+    width: 10rem;
   }
 }

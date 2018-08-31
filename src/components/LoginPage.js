@@ -22,7 +22,7 @@ export const LoginPage = ({ startLogin, startAnonymousLogin }) => (
         className="login-page__guest-login-button"
         onClick={startAnonymousLogin}
       >
-        Login as Guest
+        Sign in as Guest
       </button>
     </div>
   </div>
