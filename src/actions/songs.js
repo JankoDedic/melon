@@ -6,8 +6,9 @@ export const setSongs = (songs) => ({
 });
 
 export const startSetSongs = () => {
-  return (dispatch) => {
-    return database.ref('users/420/songs').once('value').then((snapshot) => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`users/${uid}/songs`).once('value').then((snapshot) => {
       const songs = [];
       snapshot.forEach((childSnapshot) => {
         songs.push({
@@ -32,8 +33,9 @@ export const addSong = (song) => {
 };
 
 export const startAddSong = (song = {}) => {
-  return (dispatch) => {
-    return database.ref('users/420/songs').push(song).then((ref) => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`users/${uid}/songs`).push(song).then((ref) => {
       dispatch(addSong({ id: ref.key, ...song }));
     });
   };
@@ -46,8 +48,9 @@ export const editSong = (id, updates) => ({
 });
 
 export const startEditSong = (id, updates) => {
-  return (dispatch) => {
-    return database.ref(`users/420/songs/${id}`).update(updates).then(() => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`users/${uid}/songs/${id}`).update(updates).then(() => {
       dispatch(editSong(id, updates));
     });
   };
