@@ -11,6 +11,7 @@ import AppRouter, { history } from './routers/AppRouter';
 import Player from './components/Player';
 import { firebase } from './firebase/firebase';
 import { login, logout } from './actions/auth';
+import { resetNowPlayingSong } from './actions/nowPlayingSong';
 import App from './components/App';
 
 const store = configureStore();
@@ -35,6 +36,7 @@ firebase.auth().onAuthStateChanged((user) => {
       }
     });
   } else {
+    store.dispatch(resetNowPlayingSong());
     store.dispatch(logout());
     console.log('logout');
     store.dispatch(clearSongs());
