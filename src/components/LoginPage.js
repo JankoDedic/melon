@@ -17,6 +17,12 @@ export const LoginPage = ({ startLogin }) => (
         onClick={startLogin}
       >
       </button>
+      <button
+        type="button"
+        className="login-page__guest-login-button"
+      >
+        Login as Guest
+      </button>
     </div>
   </div>
 );
