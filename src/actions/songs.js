@@ -5,6 +5,23 @@ export const setSongs = (songs) => ({
   songs,
 });
 
+const defaultSongs = [{
+  id: '1',
+  title: 'Uptown Funk',
+  artists: 'Mark Ronson, Bruno Mars',
+  url: 'https://www.youtube.com/watch?v=OPf0YbXqDm0',
+}, {
+  id: '2',
+  title: "Stayin' Alive",
+  artists: 'Bee Gees',
+  url: 'https://www.youtube.com/watch?v=OPf0YbXqDm0',
+}, {
+  id: '3',
+  title: 'Slide',
+  artists: 'Calvin Harris, Frank Ocean, Migos',
+  url: 'https://www.youtube.com/watch?v=8Ee4QjCEHHc',
+}];
+
 export const startSetSongs = () => {
   return (dispatch, getState) => {
     const uid = getState().auth.uid;
@@ -16,7 +33,11 @@ export const startSetSongs = () => {
           ...childSnapshot.val()
         });
       });
-      dispatch(setSongs(songs));
+      if (songs.length === 0) {
+        dispatch(setSongs(defaultSongs));
+      } else {
+        dispatch(setSongs(songs));
+      }
     });
   };
 };
@@ -62,8 +83,9 @@ export const removeSong = (id) => ({
 });
 
 export const startRemoveSong = (id) => {
-  return (dispatch) => {
-    return database.ref(`users/420/songs/${id}`).remove().then(() => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
+    return database.ref(`users/${uid}/songs/${id}`).remove().then(() => {
       dispatch(removeSong(id));
     });
   };
