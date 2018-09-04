@@ -37,10 +37,5 @@ module.exports = {
       'process.env.FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER_ID)
     })
   ],
-  devServer: {
-    contentBase: path.join(__dirname, 'public'),
-    publicPath: '/dist/',
-    historyApiFallback: true
-  },
   devtool: 'inline-source-map'
 };
