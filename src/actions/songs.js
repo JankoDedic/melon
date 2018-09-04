@@ -14,7 +14,7 @@ const defaultSongs = [{
   id: '2',
   title: "Stayin' Alive",
   artists: 'Bee Gees',
-  url: 'https://www.youtube.com/watch?v=OPf0YbXqDm0',
+  url: 'https://www.youtube.com/watch?v=I_izvAbhExY',
 }, {
   id: '3',
   title: 'Slide',
