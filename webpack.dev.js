@@ -9,5 +9,6 @@ module.exports = merge(common, {
     publicPath: '/dist/',
     historyApiFallback: true
   },
+  devtool: 'inline-source-map'
 });
 

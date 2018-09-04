@@ -35,6 +35,5 @@ module.exports = {
       'process.env.FIREBASE_STORAGE_BUCKET': JSON.stringify(process.env.FIREBASE_STORAGE_BUCKET),
       'process.env.FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER_ID)
     })
-  ],
-  devtool: 'inline-source-map'
+  ]
 };
