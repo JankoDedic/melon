@@ -1,9 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ReactPlayer from 'react-player';
+import moment from 'moment';
 
 import Seekbar from './Seekbar';
 import VolumeSlider from './VolumeSlider';
+
+const formatDuration = (seconds) => {
+  const duration = moment.duration(seconds, 'seconds');
+  const min = duration.minutes();
+  const minstr = min < 10 ? '0' + min.toString() : min.toString();
+  const sec = duration.seconds();
+  const secstr = sec < 10 ? '0' + sec.toString() : sec.toString();
+  return minstr + ':' + secstr;
+};
 
 const reactPlayerStyle = {
   display: 'none'
@@ -84,6 +94,8 @@ class Player extends React.Component {
   }
 
   render() {
+    const secondsElapsed = moment.duration(this.state.progress, 'seconds');
+    const secondsTotal = moment.duration(this.state.duration, 'seconds');
     return (
       <div className="player-container">
         <div className="player">
@@ -116,6 +128,8 @@ class Player extends React.Component {
             )
           }
 
+          <div>{formatDuration(secondsElapsed)}</div>
+
           <div className="player__seekbar">
             <Seekbar
               duration={this.state.duration}
@@ -125,6 +139,8 @@ class Player extends React.Component {
               onHandleDragEnd={() => { console.log('Playback resumed'); }}
             />
           </div>
+
+          <div>{formatDuration(secondsTotal)}</div>
 
           <div className="player__volume-control">
             <div

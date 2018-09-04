@@ -12,7 +12,7 @@
 .player {
   @extend .content-container;
   align-items: center;
-  // background-color: green;
+  color: $off-white;
   display: flex;
   height: 100%;
 }
