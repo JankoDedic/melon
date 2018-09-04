@@ -7,6 +7,8 @@ if (process.env.NODE_ENV === 'development') {
   require('dotenv').config({ path: '.env.development' });
 }
 
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = {
   entry: [ 'babel-polyfill', './src/app.js' ],
   output: {
@@ -22,11 +24,18 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'styles.css'
+    }),
     new webpack.DefinePlugin({
       'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
       'process.env.FIREBASE_AUTH_DOMAIN': JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),
