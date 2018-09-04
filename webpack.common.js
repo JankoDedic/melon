@@ -8,7 +8,6 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 module.exports = {
-  mode: 'development',
   entry: [ 'babel-polyfill', './src/app.js' ],
   output: {
     path: path.join(__dirname, 'public', 'dist'),
