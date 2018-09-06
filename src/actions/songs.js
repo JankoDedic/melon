@@ -34,9 +34,9 @@ export const startSetSongs = () => {
         });
       });
       if (songs.length === 0) {
-        dispatch(setSongs(defaultSongs));
+        return dispatch(setSongs(defaultSongs));
       } else {
-        dispatch(setSongs(songs));
+        return dispatch(setSongs(songs));
       }
     });
   };
