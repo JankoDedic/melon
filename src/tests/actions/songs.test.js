@@ -5,9 +5,9 @@ import database from '../../firebase/firebase';
 import {
   setSongs, startSetSongs,
   clearSongs,
-  addSong,
-  editSong,
-  removeSong
+  addSong, startAddSong,
+  editSong, startEditSong,
+  removeSong, startRemoveSong
 } from '../../actions/songs';
 
 const createMockStore = configureStore([thunk]);
@@ -79,6 +79,27 @@ test('action for adding a song gets generated', () => {
   });
 });
 
+test('action for adding a song gets generated and dispatched async', (done) => {
+  const store = createMockStore(defaultAuthState);
+  const newSong = {
+    title: 'example title',
+    artists: 'some artists',
+    url: 'some random url'
+  };
+  const action = startAddSong(newSong);
+  store.dispatch(action).then(() => {
+    const actions = store.getActions();
+    expect(actions[0]).toEqual({
+      type: 'ADD_SONG',
+      song: {
+        id: expect.any(String),
+        ...newSong
+      }
+    });
+    done();
+  });
+});
+
 test('action for editing a song gets generated', () => {
   const id = 'sample id';
   const updates = {
@@ -93,11 +114,44 @@ test('action for editing a song gets generated', () => {
   });
 });
 
+test('action for editing a song gets generated and dispatched async', (done) => {
+  const store = createMockStore(defaultAuthState);
+  const updates = {
+    title: 'updated title',
+    artists: 'updated artists',
+    url: 'updated url'
+  };
+  const action = startEditSong(songs[1].id, updates);
+  store.dispatch(action).then(() => {
+    const actions = store.getActions();
+    expect(actions[0]).toEqual({
+      type: 'EDIT_SONG',
+      id: songs[1].id,
+      updates
+    });
+    done();
+  });
+});
+
 test('action for removing a song gets generated', () => {
   const id = 'sample id';
   const action = removeSong(id);
   expect(action).toEqual({
     type: 'REMOVE_SONG',
     id
+  });
+});
+
+test('action for removing a song gets generated and dispatched async', (done) => {
+  const store = createMockStore(defaultAuthState);
+  const id = songs[2].id;
+  const action = startRemoveSong(id);
+  store.dispatch(action).then(() => {
+    const actions = store.getActions();
+    expect(actions[0]).toEqual({
+      type: 'REMOVE_SONG',
+      id
+    });
+    done();
   });
 });

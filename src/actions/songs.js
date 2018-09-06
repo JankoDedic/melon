@@ -72,7 +72,7 @@ export const startEditSong = (id, updates) => {
   return (dispatch, getState) => {
     const uid = getState().auth.uid;
     return database.ref(`users/${uid}/songs/${id}`).update(updates).then(() => {
-      dispatch(editSong(id, updates));
+      return dispatch(editSong(id, updates));
     });
   };
 };
@@ -86,7 +86,7 @@ export const startRemoveSong = (id) => {
   return (dispatch, getState) => {
     const uid = getState().auth.uid;
     return database.ref(`users/${uid}/songs/${id}`).remove().then(() => {
-      dispatch(removeSong(id));
+      return dispatch(removeSong(id));
     });
   };
 };
