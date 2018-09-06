@@ -80,6 +80,9 @@ test('action for adding a song gets generated and dispatched async', (done) => {
         ...newSong
       }
     });
+    return database.ref(`users/${uid}/songs/${actions[0].song.id}`).once('value');
+  }).then((snapshot) => {
+    expect(snapshot.val()).toEqual(newSong);
     done();
   });
 });
@@ -113,6 +116,13 @@ test('action for editing a song gets generated and dispatched async', (done) => 
       id: songs[1].id,
       updates
     });
+    return database.ref(`users/${uid}/songs/${actions[0].id}`).once('value');
+  }).then((snapshot) => {
+    const { id, ...rest } = songs[1];
+    expect(snapshot.val()).toEqual({
+      ...rest,
+      ...updates
+    });
     done();
   });
 });
@@ -136,6 +146,9 @@ test('action for removing a song gets generated and dispatched async', (done) =>
       type: 'REMOVE_SONG',
       id
     });
+    return database.ref(`users/${uid}/songs/${songs[2].id}`).once('value');
+  }).then((snapshot) => {
+    expect(snapshot.val()).toBeFalsy();
     done();
   });
 });
