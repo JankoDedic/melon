@@ -2,6 +2,7 @@ import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 
 import database from '../../firebase/firebase';
+import songs from '../fixtures/songs';
 import {
   setSongs, startSetSongs,
   clearSongs,
@@ -17,23 +18,6 @@ const defaultAuthState = {
     uid
   }
 };
-
-const songs = [{
-  id: '1',
-  title: 'Feeling Good',
-  artists: 'Muse',
-  url: 'example'
-}, {
-  id: '2',
-  title: 'Knights of Cydonia',
-  artists: 'Muse',
-  url: 'example2'
-}, {
-  id: '3',
-  title: 'Sultans of Swing',
-  artists: 'Dire Straits',
-  url: 'example3'
-}];
 
 beforeEach((done) => {
   const songsData = {};
