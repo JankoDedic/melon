@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddSongPage is rendered properly 1`] = `
+<SongForm
+  formTitle="Add Song"
+  onSubmit={[Function]}
+/>
+`;
