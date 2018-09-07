@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SongDashboardPage gets rendered properly 1`] = `
+<div
+  className="song-dashboard"
+>
+  <div
+    className="song-dashboard__nav"
+  >
+    <div
+      className="song-dashboard__nav__search"
+    >
+      <input
+        onChange={[Function]}
+        placeholder="Search for songs and artists"
+        spellCheck="false"
+        type="text"
+      />
+    </div>
+    <div
+      className="song-dashboard__nav__button"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Add Song
+      </button>
+    </div>
+  </div>
+  <Connect(SongList) />
+</div>
+`;

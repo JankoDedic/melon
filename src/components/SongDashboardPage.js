@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { setTextFilter } from '../actions/filters';
 import SongList from './SongList';
 
-class SongDashboardPage extends React.Component {
+export class SongDashboardPage extends React.Component {
   onTextChange = (e) => {
     this.props.setTextFilter(e.target.value);
   }
