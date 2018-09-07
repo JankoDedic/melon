@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditSongPage is rendered properly 1`] = `
+<div>
+  <SongForm
+    formTitle="Edit Song"
+    onRemove={[Function]}
+    onSubmit={[Function]}
+    removeButton={true}
+    song={
+      Object {
+        "artists": "Muse",
+        "id": "1",
+        "title": "Feeling Good",
+        "url": "example",
+      }
+    }
+  />
+</div>
+`;

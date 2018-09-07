@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import SongForm from './SongForm';
 import { startEditSong, startRemoveSong } from '../actions/songs';
 
-class EditSongPage extends React.Component {
+export class EditSongPage extends React.Component {
   handleSubmit = (song) => {
     this.props.startEditSong(this.props.song.id, song);
     this.props.history.push('/dashboard');
