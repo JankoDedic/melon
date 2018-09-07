@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginPage gets rendered properly 1`] = `
+<div
+  className="login-page-container"
+>
+  <div
+    className="login-page"
+  >
+    <Logo
+      className="login-page__logo"
+    />
+    <div
+      className="login-page__slogan"
+    >
+      One music collection. Any stream.
+    </div>
+    <button
+      className="login-page__button"
+      onClick={[MockFunction]}
+      type="button"
+    />
+    <button
+      className="login-page__guest-login-button"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      Sign in as Guest
+    </button>
+  </div>
+</div>
+`;
