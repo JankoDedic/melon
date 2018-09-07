@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header gets rendered properly 1`] = `
+<div
+  className="header-container"
+>
+  <div
+    className="header"
+  >
+    <Link
+      className="router-link"
+      replace={false}
+      to="/dashboard"
+    >
+      <Logo
+        className="header__logo"
+      />
+    </Link>
+    <button
+      className="header__logout"
+      onClick={[MockFunction]}
+    >
+      Logout
+    </button>
+  </div>
+</div>
+`;
