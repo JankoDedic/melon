@@ -1,26 +1,34 @@
 import songsReducer from '../../reducers/songs';
 import songs from '../fixtures/songs';
 
-test('set songs action sets the songs', () => {
+describe('given an empty state and a set songs action', () => {
   const state = [];
   const action = {
     type: 'SET_SONGS',
     songs
   };
-  const nextState = songsReducer(state, action);
-  expect(nextState).toEqual(songs);
+
+  it('sets the songs', () => {
+    const nextState = songsReducer(state, action);
+
+    expect(nextState).toEqual(songs);
+  });
 });
 
-test('clear songs action clears the songs', () => {
+describe('given some state and a clear songs action', () => {
   const state = songs;
   const action = {
     type: 'CLEAR_SONGS'
   };
-  const nextState = songsReducer(state, action);
-  expect(nextState).toEqual([]);
+
+  it('clears the songs', () => {
+    const nextState = songsReducer(state, action);
+
+    expect(nextState).toEqual([]);
+  });
 });
 
-test('add song action adds the song to songs', () => {
+describe('given some state and an add song action', () => {
   const state = songs;
   const song = {
     title: 'a new song',
@@ -31,11 +39,15 @@ test('add song action adds the song to songs', () => {
     type: 'ADD_SONG',
     song
   };
-  const nextState = songsReducer(state, action);
-  expect(nextState).toEqual([...songs, song]);
+
+  it('adds a new song', () => {
+    const nextState = songsReducer(state, action);
+
+    expect(nextState).toEqual([...songs, song]);
+  });
 });
 
-test('edit song action edits the song', () => {
+describe('given some state and an edit song action', () => {
   const state = songs;
   const id = songs[1].id;
   const updates = {
@@ -47,20 +59,28 @@ test('edit song action edits the song', () => {
     id,
     updates
   };
-  const nextState = songsReducer(state, action);
-  expect(nextState[1]).toEqual({
-    ...songs[1],
-    ...updates
+
+  it('edits the song', () => {
+    const nextState = songsReducer(state, action);
+
+    expect(nextState[1]).toEqual({
+      ...songs[1],
+      ...updates
+    });
   });
 });
 
-test('remove song action removes the song', () => {
+describe('given some state and a remove song action', () => {
   const state = songs;
   const id = songs[2].id;
   const action = {
     type: 'REMOVE_SONG',
     id
   };
-  const nextState = songsReducer(state, action);
-  expect(nextState).toEqual([songs[0], songs[1]]);
+
+  it('removes the song', () => {
+    const nextState = songsReducer(state, action);
+
+    expect(nextState).toEqual([songs[0], songs[1]]);
+  });
 });
