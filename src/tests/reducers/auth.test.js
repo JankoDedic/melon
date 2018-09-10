@@ -1,25 +1,31 @@
 import authReducer from '../../reducers/auth';
 
-test('login action sets the uid', () => {
+describe('given an empty state and login action', () => {
   const uid = 'testuid';
   const action = {
     type: 'LOGIN',
     uid
   };
   const state = {};
-  const newState = authReducer(state, action);
-  expect(newState).toEqual({
-    uid
+
+  it('sets the uid', () => {
+    const newState = authReducer(state, action);
+
+    expect(newState).toEqual({ uid });
   });
 });
 
-test('logout action removes the uid', () => {
+describe('given some state and logout action', () => {
   const state = {
     uid: 'someuid'
   };
   const action = {
     type: 'LOGOUT'
   };
-  const newState = authReducer(state, action);
-  expect(newState).toEqual({});
+
+  it('removes the uid', () => {
+    const newState = authReducer(state, action);
+
+    expect(newState).toEqual({});
+  });
 });
