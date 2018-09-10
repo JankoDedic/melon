@@ -3,22 +3,31 @@ import {
   resetNowPlayingSong
 } from '../../actions/nowPlayingSong';
 
-test('action for setting nowPlayingSong gets generated', () => {
-  const song = {
-    title: 'Example title',
-    artists: 'Example artists',
-    url: 'Example url'
-  };
-  const action = setNowPlayingSong(song);
-  expect(action).toEqual({
-    type: 'SET_NOW_PLAYING_SONG',
-    song
+describe('set now playing song action generator', () => {
+  describe('given a song', () => {
+    const song = {
+      title: 'Example title',
+      artists: 'Example artists',
+      url: 'Example url'
+    };
+
+    it('generates a valid action', () => {
+      const action = setNowPlayingSong(song);
+
+      expect(action).toEqual({
+        type: 'SET_NOW_PLAYING_SONG',
+        song
+      });
+    });
   });
 });
 
-test('action for resetting the nowPlayingSong gets generated', () => {
-  const action = resetNowPlayingSong();
-  expect(action).toEqual({
-    type: 'RESET_NOW_PLAYING_SONG'
-  })
+describe('reset now playing song action generator', () => {
+  it('generates a valid action', () => {
+    const action = resetNowPlayingSong();
+
+    expect(action).toEqual({
+      type: 'RESET_NOW_PLAYING_SONG'
+    });
+  });
 });
