@@ -4,22 +4,29 @@ import {
   resetNowPlayingSong
 } from '../../actions/nowPlayingSong';
 
-const song = {
-  title: 'Example song title',
-  artists: 'Example artists',
-  url: 'plain url'
-};
-
-test('now playing song gets set in the next state', () => {
+describe('given an empty state and set now playing song action', () => {
   const state = {};
+  const song = {
+    title: 'Example song title',
+    artists: 'Example artists',
+    url: 'plain url'
+  };
   const action = setNowPlayingSong(song);
-  expect(nowPlayingSongReducer(state, action)).toEqual(song);
+
+  it('sets the now playing song', () => {
+    const newState = nowPlayingSongReducer(state, action);
+
+    expect(newState).toEqual(song);
+  });
 });
 
-test('now playing song gets reset in the next state', () => {
+describe('given some state and reset now playing song action', () => {
   const state = {};
   const action = resetNowPlayingSong();
-  expect(nowPlayingSongReducer(state, action)).toEqual({
-    url: ''
+
+  it('resets the now playing song', () => {
+    const newState = nowPlayingSongReducer(state, action);
+
+    expect(newState).toEqual({ url: '' });
   });
 });
