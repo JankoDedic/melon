@@ -17,6 +17,7 @@ describe('login action generator', () => {
 describe('logout action generator', () => {
   it('generates a valid action', () => {
     const action = logout();
+
     expect(action).toEqual({
       type: 'LOGOUT'
     });
