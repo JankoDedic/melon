@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SongForm snapshot 1`] = `
+<div>
+  <div
+    className="song-form__header"
+  />
+  <form
+    className="song-form__form"
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Title"
+      spellCheck="false"
+      type="text"
+      value="Knights of Cydonia"
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Artists"
+      spellCheck="false"
+      type="text"
+      value="Muse"
+    />
+    <input
+      onChange={[Function]}
+      placeholder="URL (YouTube, SoundCloud...)"
+      spellCheck="false"
+      type="text"
+      value="https://www.youtube.com/watch?v=G_sBOsh-vyI"
+    />
+    <div
+      className="song-form__form__buttons"
+    >
+      <button
+        className="primary-button"
+      >
+        Save Song
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`SongForm snapshot with default song info 1`] = `
+<div>
+  <div
+    className="song-form__header"
+  />
+  <form
+    className="song-form__form"
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Title"
+      spellCheck="false"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Artists"
+      spellCheck="false"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="URL (YouTube, SoundCloud...)"
+      spellCheck="false"
+      type="text"
+      value=""
+    />
+    <div
+      className="song-form__form__buttons"
+    >
+      <button
+        className="primary-button"
+      >
+        Save Song
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`given song info with invalid URL given a form submit event sets the error state 1`] = `
+<div>
+  <div
+    className="song-form__header"
+  />
+  <p
+    className="song-form__error"
+  >
+    Invalid URL. Melon cannot play this media.
+  </p>
+  <form
+    className="song-form__form"
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Title"
+      spellCheck="false"
+      type="text"
+      value="Feeling Good"
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Artists"
+      spellCheck="false"
+      type="text"
+      value="Muse"
+    />
+    <input
+      onChange={[Function]}
+      placeholder="URL (YouTube, SoundCloud...)"
+      spellCheck="false"
+      type="text"
+      value=""
+    />
+    <div
+      className="song-form__form__buttons"
+    >
+      <button
+        className="primary-button"
+      >
+        Save Song
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`given song info with invalid title given a form submit event sets the error state 1`] = `
+<div>
+  <div
+    className="song-form__header"
+  />
+  <p
+    className="song-form__error"
+  >
+    Invalid title.
+  </p>
+  <form
+    className="song-form__form"
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Title"
+      spellCheck="false"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Artists"
+      spellCheck="false"
+      type="text"
+      value="Muse"
+    />
+    <input
+      onChange={[Function]}
+      placeholder="URL (YouTube, SoundCloud...)"
+      spellCheck="false"
+      type="text"
+      value="https://www.youtube.com/watch?v=G_sBOsh-vyI"
+    />
+    <div
+      className="song-form__form__buttons"
+    >
+      <button
+        className="primary-button"
+      >
+        Save Song
+      </button>
+    </div>
+  </form>
+</div>
+`;

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 import PropTypes from 'prop-types';
 
-export default class SongForm extends React.Component {
+export class SongForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -99,3 +99,5 @@ SongForm.propTypes = {
     url: PropTypes.string,
   }),
 };
+
+export default SongForm;

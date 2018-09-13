@@ -12,7 +12,7 @@ exports[`EditSongPage is rendered properly 1`] = `
         "artists": "Muse",
         "id": "1",
         "title": "Feeling Good",
-        "url": "example",
+        "url": "https://www.youtube.com/watch?v=CmwRQqJsegw",
       }
     }
   />
