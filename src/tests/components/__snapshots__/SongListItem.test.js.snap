@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SongListItem snapshot 1`] = `
+<div
+  className="song-list-item"
+>
+  <div
+    className="song-list-item__info"
+  >
+    <div
+      className="song-list-item__info__title"
+    >
+      Feeling Good
+    </div>
+    <div
+      className="song-list-item__info__artists"
+    >
+      Muse
+    </div>
+  </div>
+  <Link
+    className="router-link song-list-item__edit_button"
+    replace={false}
+    to="/edit/1"
+  >
+    edit
+  </Link>
+</div>
+`;

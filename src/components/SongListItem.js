@@ -15,7 +15,7 @@ export const SongListItem = ({ song, setNowPlayingSong }) => (
 );
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  setNowPlayingSong: (song) => dispatch(setNowPlayingSong(ownProps.song)),
+  setNowPlayingSong: () => dispatch(setNowPlayingSong(ownProps.song)),
 });
 
 export default connect(undefined, mapDispatchToProps)(SongListItem);
