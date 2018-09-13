@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Logo gets rendered properly 1`] = `
+exports[`Logo snapshot 1`] = `
 <div>
   <div />
   melon
