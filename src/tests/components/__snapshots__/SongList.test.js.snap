@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SongList snapshot 1`] = `
+<div
+  className="song-list"
+>
+  <Connect(SongListItem)
+    key="1"
+    song={
+      Object {
+        "artists": "Muse",
+        "id": "1",
+        "title": "Feeling Good",
+        "url": "https://www.youtube.com/watch?v=CmwRQqJsegw",
+      }
+    }
+  />
+  <Connect(SongListItem)
+    key="2"
+    song={
+      Object {
+        "artists": "Muse",
+        "id": "2",
+        "title": "Knights of Cydonia",
+        "url": "https://www.youtube.com/watch?v=G_sBOsh-vyI",
+      }
+    }
+  />
+  <Connect(SongListItem)
+    key="3"
+    song={
+      Object {
+        "artists": "Dire Straits",
+        "id": "3",
+        "title": "Sultans of Swing",
+        "url": "https://www.youtube.com/watch?v=0fAQhSRLQnM",
+      }
+    }
+  />
+</div>
+`;
