@@ -17,7 +17,7 @@ const styles = {
   },
 };
 
-class VolumeSlider extends React.Component {
+export class VolumeSlider extends React.Component {
   handleChange = (e, value) => {
     this.props.onVolumeChange(value);
   };

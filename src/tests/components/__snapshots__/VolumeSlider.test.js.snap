@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VolumeSlider snapshot 1`] = `
+<div>
+  <WithStyles(Slider)
+    classes={
+      Object {
+        "thumb": undefined,
+        "track": undefined,
+      }
+    }
+    max={1}
+    onChange={[Function]}
+    onDragEnd={[MockFunction]}
+    onDragStart={[MockFunction]}
+    reverse={true}
+    value={0}
+    vertical={true}
+  />
+</div>
+`;
